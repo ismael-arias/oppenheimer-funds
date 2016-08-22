@@ -1,0 +1,300 @@
+header:
+section1:
+  svg: "images/header.svg"
+  paragraphs: |
+    s humans have evolved, so have our abilities
+    to perceive and interpret the world around us.
+    Aristotle is credited with being the first to
+    classify the major senses — sight, smell, hearing, touch
+    and taste — but sensory perception extends far
+    beyond the “Big Five.” There’s no scientific consensus
+    on exactly how many senses the human body has
+    developed, as researchers hotly debate how many
+    senses we actually have, ranging from
+    equilibrioception, which detects balance, to temporal
+    perception, that lets us sense the passing of time.
+
+section2:
+  content:
+    info:
+      - caption: "Our innate senses were initially used for tracking prey and hearing warnings."
+        paragraphs: |
+          Our senses not only help us navigate the world, they’re also crucial
+          instruments that allowed us to become social creatures, form
+          interpersonal bonds, and communicate how it feels to be us.
+          Technologies are now using our innate senses as guideposts to
+          create more sophisticated ways of discovering ourselves and our
+          world, with investment potential in biometric applications
+          flourishing in fields ranging from security to marketing.
+
+      - caption: "Technologies like the telescope were invented to enhance our senses."
+        paragraphs: |
+            It has taken millions of years for evolution to slowly fine-tune the
+            sensory perception instruments our bodies use today. What began
+            with bacteria, which were generally only equipped to respond to
+            “the chemical milieu and whether they were bumping into
+            something” according to Paul Fuchs, co-director of the Center for
+            Sensory Biology at Johns Hopkins Medicine, our modern sensory
+            systems have evolved to encompass millions of nerve, brain and
+            organ cells all working together to transform data from our
+            environments into information the body can use to navigate life and understand other social creatures.
+
+
+      - caption: "Today, we are pushing sensory enhancements even further."
+        paragraphs: |
+          Technology has long lent a helping hand. For centuries, inventions
+          like binoculars and hearing aids have worked in conjunction with
+          our natural senses to make them better and sharper, sometimes
+          enhancing beyond the body’s natural limitations.<br/><br/>
+
+          While improving human senses is still an important part of
+          technology, in recent years, technologies guided by data and
+          information flow, and coupled with enhanced forms of our senses,
+          are providing new ways of understanding ourselves. Emerging
+          biometric and identity science technologies are using data to create
+          new methods of analyzing our physical bodies and behavioral
+          patterns, leading to novel ways of understanding ourselves and
+          cracking problems once thought unsolvable. It's also leading to new
+          opportunities in myriad fields that previously had never imaged
+          using such technology.
+
+
+section2-paragraph:
+  parags:
+    text:
+      - paragraphs: |
+          Our senses not only help us navigate the world, they’re also crucial
+          instruments that allowed us to become social creatures, form
+          interpersonal bonds, and communicate how it feels to be us.
+          Technologies are now using our innate senses as guideposts to
+          create more sophisticated ways of discovering ourselves and our
+          world, with investment potential in biometric applications
+          flourishing in fields ranging from security to marketing.
+
+      - paragraphs: |
+          It has taken millions of years for evolution to slowly fine-tune the
+          sensory perception instruments our bodies use today. What began
+          with bacteria, which were generally only equipped to respond to
+          “the chemical milieu and whether they were bumping into
+          something” according to Paul Fuchs, co-director of the Center for
+          Sensory Biology at Johns Hopkins Medicine, our modern sensory
+          systems have evolved to encompass millions of nerve, brain and
+          organ cells all working together to transform data from our
+          environments into information the body can use to navigate life and understand other social creatures.
+
+      - paragraphs: |
+          Technology has long lent a helping hand. For centuries, inventions
+          like binoculars and hearing aids have worked in conjunction with
+          our natural senses to make them better and sharper, sometimes
+          enhancing beyond the body’s natural limitations.
+
+      - paragraphs: |
+          While improving human senses is still an important part of
+          technology, in recent years, technologies guided by data and
+          information flow, and coupled with enhanced forms of our senses,
+          are providing new ways of understanding ourselves. Emerging
+          biometric and identity science technologies are using data to create
+          new methods of analyzing our physical bodies and behavioral
+          patterns, leading to novel ways of understanding ourselves and
+          cracking problems once thought unsolvable. It's also leading to new
+          opportunities in myriad fields that previously had never imaged
+          using such technology.
+
+section3:
+  title: "Touch Sensitivity"
+  paragraphs: |
+      There are more than 17,000 tactile units in the hand alone, and
+      that’s just a small portion of the sensory receptors that make up our
+      sense of touch. Believed to be the first sense fetuses develop, touch
+      is so important as a means of communication, establishing intimate
+      bonds and orienting ourselves in the world, it can actually shape
+      chemical development in the brain and have lasting physical and
+      social effects.
+  copy:
+    paragraphs: |
+      Just as touch is vital for identifying our surroundings and the people
+      in them, it’s also a key way for men and machines identify us.
+      Fingerprint matching focuses on the minutia — the shape, endings
+      and bifurcations of the ridges —which are so distinctive, not even
+      identical twins share the same patterns. This extraordinary
+      individuation has made fingerprinting (and fingerprint readers) a
+      hallmark of law enforcement security and identification protocols,
+      with technologies being used in areas spanning from artwork
+      authentication and financial transactions at billion-dollar
+      institutions, all the way down to elementary schools using
+      fingerprint payment systems for students to buy lunch.
+
+  copy2:
+    paragraphs: |
+      “It’s the fusion of all
+      this multi-sensory
+      information which
+      gives a more sure
+      way of knowing
+       who this person is.”
+
+  copy3:
+    paragraphs: |
+      Anil K. Jain, a computer science
+      and engineering professor at
+      Michigan State University,
+
+  copy4:
+    paragraphs: |
+      and his Ph.D. student, Sunpreet Arora, made the world's first 3D
+      printed fingerprint two years ago. He says that the ability to create
+      physical models of prints will help improve accuracy of fingerprint
+      scanners while Hybrid or multi-modal identification technologies
+      that combine traditional fingerprinting with other non-biometric
+      and biometric identification methods are being adopted to improve
+      accuracy and make the biometric systems more secure.<br /><br />
+
+      We have “a multitude of sensors (and) each one is capturing some
+      incomplete and noisy information,” Jain says. “It’s the fusion of all
+      this multisensory information which gives a more sure way of
+      knowing who this person is.”
+
+  copy5:
+    paragraphs: |
+      Anil K. Jain, a computer science
+      and engineering professor at
+      Michigan State University,
+      and his Ph.D. student, Sunpreet Arora, made the world's first 3D
+      printed fingerprint two years ago. He says that the ability to create
+      physical models of prints will help improve accuracy of fingerprint
+      scanners while Hybrid or multi-modal identification technologies
+      that combine traditional fingerprinting with other non-biometric
+      and biometric identification methods are being adopted to improve
+      accuracy and make the biometric systems more secure.<br /><br />
+
+      We have “a multitude of sensors (and) each one is capturing some
+      incomplete and noisy information,” Jain says. “It’s the fusion of all
+      this multisensory information which gives a more sure way of
+      knowing who this person is.”
+
+section4:
+  title: "Facial Recognition"
+  copy:
+    paragraphs: |
+      The ability to find friends, build communities, and avoid foes is'
+      crucial to the survival of many species. So it’s not surprising that
+      human babies recognize faces almost from the second they’re born.
+      Research shows that infants mere minutes old can recognize facial
+      patterns and, within a couple days, can pick out their mothers faces
+      among a sea of others. By six months, children are so adept at facial
+      recognition, they can identify individuals within an animal species
+       more accurately than adults can.<br/><br />
+
+      Using some techniques that mimic how cells in the visual cortex
+      process information, facial recognition algorithms are catching up
+      to their human counterparts. Widespread in the biometrics world,
+      facial recognition programs are used by an enormous array of
+      organizations, from law enforcement agencies searching for
+      suspects to bars and restaurants identifying loyal customers to
+      mining companies detecting whether machine operators are alert
+      or drowsy.
+
+  copy2:
+    paragraphs: |
+      Roll Over Faces to Animate
+
+  copy3:
+    paragraphs: |
+      Analyzing how features change, emotion ID systems
+      can pick out signature emotions like happiness,
+      surprise and disgust.
+
+  copy4:
+    paragraphs: |
+      Damon L. Woodard, an associate professor in electrical and
+      computer engineering and a faculty member at the Florida Institute
+      for Cybersecurity (FICS) Research at the University of Florida, says
+      that facial recognition is endemic in next generation security
+      protocols, and accuracy is improving as researchers gain access to
+      broader data sets that can train algorithms for variations in poses,
+      illumination, facial expressions, and image quality.<br /><br />
+
+      “In the next five years, I think more emphasis is going to be on the
+      capability of doing biometric recognition under less and less
+      constrained scenarios,” he says.
+
+section5:
+  title: "Iris Imaging"
+  copy:
+    paragraphs: |
+      Crucial for nonverbal communication and interpersonal bonding,
+      eyes have evolved to be noticeable and emotive. Designed to
+      visually stand out — humans are one of the only primates with high
+      contrast between the iris and the white part of the eye called the
+      sclera—eyes are rich information portals that babies instinctually
+      seek out. One study published in Proceedings of the National
+      Academy of Sciences found that newborns as young as two days old
+      show preference for people who gaze directly into their eyes rather
+      than away. There are chemical reasons behind that. Sustained eye
+      contact releases oxytocin, a hormone associated with social
+      bonding, which may explain the fuzzy feelings that come when
+      gazing deep into a lover’s (or dog’s) eyes.
+
+  copy1:
+    paragraphs: |
+      Iris scanning has an advantage over other
+      biometric identification methods because
+      irises don't significantly change with age.
+
+  copy2:
+    paragraphs: |
+      Eyes are valuable data hotspots for identification and security
+      systems, too, in part because irises are far more distinctive than
+      other biomarkers. Compared to 10-point DNA analysis, where the
+      chance of two unrelated people having a match on 10 genetic
+      markers and thus yielding a false identification is about one out of
+      every billion (109), the chances of two people having identical irises
+      is about drastically smaller (1078). Iris scanners have another major
+      advantage over other biometric identification systems because,
+      unlike faces and voices, irises don’t significantly change with age.<br /><br />
+
+      Iris recognition generally requires subjects to stay still and in close
+      proximity to the scanner says Woodard, but that may change soon.
+      Emerging research focused on long-range detection and
+      video-based identification systems have the potential to
+      revolutionize how iris scanning is used in security, identification and
+      medical contexts.
+
+
+# section1:
+#   title: "Section One"
+#   slideshow:
+#     title: "Slideshow | Section One"
+#     images:
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 1"
+#         caption: "Image 1 caption"
+#
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 2"
+#         caption: "Image 2 caption"
+#
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 3"
+#         caption: "Image 3 caption"
+#
+#   paragraphs: |
+#     Here are some paragraphs.
+#     Each paragraph is separated by a line break.
+#
+# section2:
+#   title: "Section Two"
+#   slideshow:
+#     title: "Slideshow | Section Two"
+#     images:
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 1"
+#         caption: "Image 1 caption"
+#
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 2"
+#         caption: "Image 2 caption"
+#
+#       - image: "https://placehold.it/1024x768"
+#         title: "Image 3"
+#         caption: "Image 3 caption"

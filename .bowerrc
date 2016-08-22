@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "postinstall": "grunt shell:bower-requirejs"
+  },
+  "ignoredDependencies": [
+  	"d3",
+  	"backbone",
+  	"gsap",
+  	"jquery",
+  	"scrollmagic",
+  	"underscore"
+  ]
+}

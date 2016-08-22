@@ -1,0 +1,34 @@
+{
+  "name": "oppenheimerfunds-from-man-to-machine",
+  "private": true,
+  "author": "Ad Platform Innovations",
+  "version": "1.0.0",
+  "PaidPost": {
+    "clientName": "OppenheimerFunds",
+    "clientPath": "oppenheimerfunds",
+    "clientLink": "#",
+    "clientLogoPath": "images/logo.png",
+    "projectName": "From Man to Machine",
+    "projectPath": "from-man-to-machine",
+    "showClientName": false,
+    "app": "app",
+    "dev": "build/dev",
+    "standalone": "build/standalone",
+    "dist": "build/dist",
+    "temp": "build/.tmp",
+    "assetsServer": "https://paidpost-assets.nyt.com/paidpost/",
+    "ajaxAssetsServer": "https://paidpost-assets.nyt.com/paidpost/",
+    "videoAssetsServer": "https://video1.nytimes.com/paidpost/",
+    "browserRefresh": true,
+    "curlUrl": "http://paidpost.nytimes.com/hewlett-packard/welcome-to-the-idea-economy.html",
+    "curlContainerSelector": "#story"
+  },
+  "devDependencies": {
+    "bourbon": "*",
+    "grunt": "^0.4.5",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.1",
+    "nytpi-sass-utils": "github:nytpi/nytpi-sass-utils#hotfix/limit-font-size-at-root-problem",
+    "scaffolding": "github:nytpi/scaffolding"
+  }
+}

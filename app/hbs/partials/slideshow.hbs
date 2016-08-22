@@ -1,0 +1,17 @@
+<ul class="pp-slideshow"
+	tracking="{{title}}"
+	data-slick='{
+		"dots":true,
+		"infinite":true, 
+        "accessibility":false,
+        "slidesToShow": 1,
+        "slidesToScroll": 1
+	}'>
+	{{#each images }}
+	<li class="slide">
+		<img src="{{ image }}"/>
+		<h3>{{ title }}</h3>
+		<p>{{ caption }}</p>
+	</li>
+	{{/each}}
+</ul>

@@ -1,0 +1,169 @@
+<header class="post-header">
+	<div class="header-container">
+		<picture class="background-image">
+			<img class="header-image" src="{{ index.section1.svg }}" alt="bg" />
+		</picture>
+	</div>
+</header>
+
+<section id="section1" class="content" tracking="First Section">
+	<div class="text-container1">
+		<p><span class="dropcap">A</span>{{ index.section1.paragraphs }}</p>
+	</div>
+</section>
+
+<section id="section2" class="section2" tracking="Second Section">
+	<div class="evolution-box">
+	    <div class="img-box">
+				{{> evolution1 }}
+			</div>
+			<div class="img-box">
+				{{> evolution2 }}
+			</div>
+			<div class="img-box">
+				{{> evolution3 }}
+			</div>
+	</div>
+	{{> paragraphs index.section2-paragraph.parags }}
+</section>
+
+<section id="section3" class="section3" tracking="Third Section">
+	<div class="section-container">
+		<div class="section-title">
+			<h1>{{ index.section3.title}}</h1>
+		</div>
+		<div class="section-top">
+			{{> hand }}
+			<div class="subtitle">
+				<p>{{ index.section3.title}}</p>
+			</div>
+		</div>
+
+		<div class="section-info">
+			<div class="top-info content">
+				<p>{{ index.section3.paragraphs}}</p>
+			</div>
+
+			<div class="middle-info">
+					{{> fingerprint }}
+				<div class="center-info content">
+					<p>{{ index.section3.copy.paragraphs}}</p>
+				</div>
+			</div>
+
+			<div class="bottom-info content">
+				<div class="pullquote">
+					<p>{{ index.section3.copy2.paragraphs}}</p>
+				</div>
+				{{> hands }}
+				<div class="bottom-copy">
+					<p>{{ index.section3.copy3.paragraphs}}</p>
+					<p>{{{ index.section3.copy4.paragraphs }}}</p>
+					<p>{{{ index.section3.copy5.paragraphs }}}</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section id="section4" class="section4" tracking="Fifth Section">
+	<div class="section-container">
+
+		<div class="section-title">
+			<h1>{{ index.section4.title}}</h1>
+		</div>
+
+		<div class="section-top">
+			{{> facial }}
+			<div class="subtitle">
+				<p>{{ index.section4.title}}</p>
+			</div>
+		</div>
+
+		<div class="section-info">
+			<div class="top-info content">
+				<p>{{{ index.section4.copy.paragraphs }}}</p>
+			</div>
+		</div>
+
+		<div class="middle-content">
+			<h2>{{{ index.section4.copy2.paragraphs }}}</h2>
+			<div class="facial-box">
+			    <div class="img-box">
+						{{> facial1 }}
+					</div>
+					<div class="img-box">
+						{{> facial2 }}
+					</div>
+					<div class="img-box">
+						{{> facial3 }}
+					</div>
+					<div class="img-box">
+						{{> facial4 }}
+					</div>
+			</div>
+			<div class="facial-info">
+				<p>{{{ index.section4.copy3.paragraphs }}}</p>
+			</div>
+		</div>
+
+		<div class="bottom-content">
+			<p>{{{ index.section4.copy4.paragraphs }}}</p>
+		</div>
+
+	</div>
+
+</section>
+
+<section id="section5" class="section5" tracking="Fifth Section">
+	<div class="section-container">
+
+		<div class="section-title">
+			<h1>{{ index.section5.title}}</h1>
+		</div>
+
+		<div class="section-top">
+			{{> iris }}
+			<div class="subtitle">
+				<p>{{{ index.section4.title }}}</p>
+			</div>
+		</div>
+
+		<div class="section-info">
+			<div class="top-info content">
+				<p>{{{ index.section5.copy.paragraphs }}}</p>
+			</div>
+
+			<div class="middle-info">
+				<div class="pullquote">
+					<p>{{ index.section5.copy1.paragraphs}}</p>
+					{{> planets }}
+				</div>
+
+				<div class="center-info content">
+					{{> eye }}
+					<div class="bottom-info">
+						<p>{{{ index.section5.copy2.paragraphs }}}</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+{{!-- <section id="section1" class="content" tracking="First Section">
+	<h2>{{ index.section1.title }}</h2>
+	{{{ lines index.section1.paragraphs }}} --}}
+
+	{{!-- SLIDESHOW PARTIAL IS VISIABLE IN PARTIALS DIRECTORY. IS GREAT FOR REPEATED ELEMENTS ON THE PAGE --}}
+	{{!-- {{> slideshow index.section1.slideshow }}
+</section> --}}
+
+{{!-- <section id="section2" class="content" tracking="Second Section">
+	<h2>{{ index.section2.title }}</h2>
+	{{{ lines index.section2.paragraphs }}}
+	{{> slideshow index.section2.slideshow }}
+</section> --}}

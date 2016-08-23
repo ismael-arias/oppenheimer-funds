@@ -7,11 +7,11 @@ $desktop-wide: 1220px; // 768px
 #shine_x5F_hand{opacity: 0;}
 
 #hand_elem_1, #hand_elem_2, #heart_elem_1, #heart_elem_2{
-    -webkit-transform-origin: center;
-    -moz-transform-origin: center;
-    -o-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 // Making the Eye
@@ -25,11 +25,11 @@ $desktop-wide: 1220px; // 768px
 #hunter{
 
     #Arm_x5F_2{
-        -webkit-transform-origin: center;
-        -moz-transform-origin: center;
-        -o-transform-origin: center;
-        -ms-transform-origin: center;
-        transform-origin: center;
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
     }
 
     #Signal_x5F_1_start, #Signal_x5F_2, #Signal_x5F_3{opacity: 0;}
@@ -74,4 +74,8 @@ $desktop-wide: 1220px; // 768px
 #face3_wrapper{
     cursor: pointer;
     #Black_x5F_dots, #Blue_x5F_Dots{opacity: 0;}
+}
+
+#face4_wrapper{
+    cursor: pointer;
 }

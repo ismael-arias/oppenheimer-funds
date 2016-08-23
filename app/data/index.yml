@@ -197,6 +197,10 @@ section4:
     paragraphs: |
       Roll Over Faces to Animate
 
+  copy2-1:
+    paragraphs: |
+      Tap Faces to Animate
+
   copy3:
     paragraphs: |
       Analyzing how features change, emotion ID systems
@@ -260,6 +264,62 @@ section5:
         video-based identification systems have the potential to
         revolutionize how iris scanning is used in security, identification and
         medical contexts.
+
+section6:
+  title: "Heart Rate"
+  subtitle: "Heart Rate Monitoring"
+  copy:
+    paragraphs: |
+      Fear, elation, stress and anger all can cause your heart rate to
+      change, which can give away a shift in mood even if your facial
+      expression doesn’t. Polygraph administrators have long used heart
+      rate changes as a way to detect if a person is feeling more stressed
+      than usual, but more recently marketers, video game designers and
+      mental health professionals are measuring heart rate variability to
+      detect when users are excited and when they’re feeling down or
+      bored.
+
+  copy1:
+    paragraphs: |
+      Biometric tools designed to read changes in voice, scent, hormones
+      and brainwaves are quickly becoming game changers across a
+      broad spectrum of fields including sports and medicine. In an effort
+      to build higher-performing, injury-resistant athletes, companies and
+      sports teams are measuring neurological signals to determine how
+      quickly athletes can detect and act upon approaching objects, heart
+      rate to determine when athletes are becoming fatigued and body
+      motion to perfect an athlete’s body symmetry and evaluate how
+      they evolve (or de-volve) throughout the season. When players get
+      injured, sports scientists use gait and motion analysis to help
+      determine why the injury happened and ways to correct and
+      prevent it in the future. Even when the season is over, teams still
+      use biometric technologies to analyze sleep patterns to ensure that
+      players are fully rested.<br /><br />
+
+      As the field of biometric applications expands—it’s projected to be a
+      $44.2 billion worldwide market by 2021—so do research and
+      investment opportunities. Where that brain and financial power
+      gets directed will determine what technologies are built and how
+      those biometric devices use our physicality and physiological
+      processes to create new ways of understanding and interpreting
+      our world.<br /><br />
+
+      Illustrations by: Ramouldo Faura
+
+  slideshow:
+      images:
+        - image: "https://placehold.it/1024x768"
+
+        - image: "https://placehold.it/1024x768"
+
+        - image: "https://placehold.it/1024x768"
+
+
+      captions:
+        caption1: "Image 1 caption"
+        caption: "Image 2 caption"
+        caption: "Image 3 caption"
+
 
 
 # section1:

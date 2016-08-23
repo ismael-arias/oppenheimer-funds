@@ -104,9 +104,12 @@
 				    top: -8px;
 				    float: left;
 				    font-size: 2.9em;
-						padding: 0 60px 8px 24px;
+						padding: 0 45px 7px 24px;
 						font-weight: 600;
 						line-height: 1em;
+						@include size-class(tablet-portrait) {
+							padding: 0 40px 0 24px;
+						}
 						@include size-class(compact) {
 							top: -5px;
 							font-size: 2.9em;
@@ -116,7 +119,7 @@
 							content: " ";
 							position: absolute;
 							left: 0;
-							bottom: 0;
+							bottom: -2px;
 							width: 78%;
 							height: 4px;
 							background-color: #61d3b1;
@@ -304,6 +307,7 @@
 						@include size-class(all-desktop) {
 							width: 100%;
 							height: 100%;
+							padding-top: 20px;
 						}
 
 					}
@@ -378,7 +382,7 @@
 
 					.svg-container{
 						@include size-class(all-desktop) {
-							width: span(2);
+							width: span(1);
 							position: absolute;
 							top: -85px;
 							left: 65px
@@ -393,7 +397,7 @@
 						}
 
 						@include size-class(compact) {
-							width: span(3);
+							width: span(2);
 							margin: 0 auto;
 							position: inherit;
 							top: 0;
@@ -593,24 +597,24 @@
 						text-align: center;
 						z-index: 1;
 					}
-					@include size-class(regular) {
-
+					@include size-class(tablet-portrait) {
+						width: span(8);
 					}
 					@include size-class(compact) {
 						display: none;
 					}
 					h1{
 						@include size-class(all-desktop) {
-							width: span(12);
+							width: span(10);
 							margin: auto;
-							font-size: em(300);
+							font-size: em(230);
 							font-weight: 300;
 							color: #feffff;
 							opacity: 0.1;
 							line-height: 1em;
 						}
-						@include size-class(regular) {
-							font-size: em(230);
+						@include size-class(tablet-portrait) {
+							font-size: em(150);
 						}
 					}
 				}
@@ -686,6 +690,7 @@
 						padding-top: 40px;
 						padding-bottom: 20px;
 						background-color: #36c1f9;
+						overflow: hidden;
 					}
 					h2{
 						@include size-class(all-desktop) {
@@ -694,13 +699,34 @@
 							text-align: center;
 							margin-bottom: 20px;
 						}
-
+						&:nth-last-of-type(1){
+							@include size-class(all-desktop) {
+								display: block;
+							}
+							@include size-class(tablet-portrait) {
+								display: block;
+							}
+							@include size-class(compact) {
+								display: none;
+							}
+						}
+						&:nth-last-of-type(2){
+							@include size-class(all-desktop) {
+								display: none;
+							}
+							@include size-class(tablet-portrait) {
+								display: none;
+							}
+							@include size-class(compact) {
+								display: block;
+							}
+						}
 					}
 					.facial-box{
 						@include size-class(all-desktop) {
 							width: span(10);
 							margin: 0 auto;
-							height: 17vw;
+							height: auto;
 							display: -webkit-box;
 							display: -moz-box;
 							display: box;
@@ -709,6 +735,12 @@
 							display: -ms-flexbox;
 							display: flex;
 							margin-bottom: 30px;
+							overflow: hidden;
+						}
+						@include size-class(compact) {
+							width: span(4);
+							height: 70vw;
+							position: relative;
 						}
 						.img-box{
 							@include size-class(all-desktop) {
@@ -722,6 +754,9 @@
 						    padding: 0% 1%;
 
 
+							}
+							@include size-class(compact) {
+								padding: 0% 4%;
 							}
 							.svg-container{
 								@include size-class(all-desktop) {
@@ -740,6 +775,83 @@
 
 								}
 
+							}
+						}
+						.slick-prev{
+							margin: 17px;
+							top: 31%;
+							left: -16px;
+							width: 24px;
+							height: 39px;
+							background: url('../images/arrow-left.png') no-repeat;
+							z-index: 1;
+							font-size: 0;
+							line-height: 0;
+							position: absolute;
+							padding: 0;
+							cursor: pointer;
+							border: none;
+							display: block;
+							background-size: 24px 39px;
+							opacity: 1;
+							-webkit-transform: translateY(0);
+							-moz-transform: translateY(0);
+							-ms-transform: translateY(0);
+							-o-transform: translateY(0);
+							transform: translateY(0);
+						}
+						.slick-next{
+							margin: 17px;
+							top: 31%;
+							right: -16px;
+							width: 24px;
+							height: 39px;
+							transform: none;
+							background: url('../images/arrow-right.png') no-repeat;
+							z-index: 1;
+							font-size: 0;
+							line-height: 0;
+							position: absolute;
+							padding: 0;
+							cursor: pointer;
+							border: none;
+							display: block;
+							background-size: 24px 39px;
+							opacity: 1;
+							-webkit-transform: translateY(0);
+							-moz-transform: translateY(0);
+							-ms-transform: translateY(0);
+							-o-transform: translateY(0);
+							transform: translateY(0);
+						}
+						.slick-dots{
+							margin-top: 0;
+							li{
+								width: 10px;
+								height: 10px;
+								border: 1px #ffffff solid;
+								border-radius: 100%;
+								margin-right: 10px;
+								@include transition(all 0.5s ease);
+
+								&.slick-active{
+									background-color: #ffffff;
+								}
+
+								&:last-child{
+									margin: 0;
+								}
+
+								button:before{
+									display: none;
+								}
+							}
+							@include size-class(compact) {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								margin: auto;
 							}
 						}
 					}
@@ -1106,33 +1218,276 @@
 
 		}
 
+		.section6{
+			@include full-bleed;
+			background-color: #000000;
+			position: relative;
+			@include size-class(all-desktop) {
+				padding-top: span(1);
+				@include font-size(36, vw, 36) {
+					line-height: em(36);
+				}
+			}
+			.section-container{
+				.section-title{
+					@include size-class(all-desktop) {
+						width: span(12);
+						margin: 0 auto;
+						position: absolute;
+						top: 13vw;
+						left: 0;
+						text-align: center;
+						z-index: 1;
+					}
+					@include size-class(regular) {
+
+					}
+					@include size-class(compact) {
+						display: none;
+					}
+					h1{
+						@include size-class(all-desktop) {
+							width: span(12);
+							margin: auto;
+							font-size: em(300);
+							font-weight: 300;
+							color: #feffff;
+							opacity: 0.1;
+							line-height: 1em;
+						}
+						@include size-class(regular) {
+							font-size: em(230);
+						}
+					}
+				}
+
+				.section-top{
+					@include size-class(all-desktop) {
+						z-index: 2;
+						width: span(12);
+					}
+					.svg-container{
+						@include size-class(all-desktop) {
+							width: span(1.5);
+							margin: 0 auto;
+						}
+						@include size-class(compact) {
+							width: span(1);
+						}
+					}
+					.subtitle{
+						@include size-class(all-desktop) {
+							width: span(8);
+							margin: 0 auto;
+							padding: span(0.5) 0;
+							padding-top:1% ;
+							text-align: center;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(5);
+						}
+						@include size-class(compact) {
+							width: span(4);
+						}
+						p{
+							@include size-class(all-desktop) {
+								@include font-size(70, vw) {
+									font-weight: 600;
+									line-height: em(36);
+									color: #4da0ff;
+									letter-spacing: 2px;
+								}
+							}
+							@include size-class(tablet-portrait) {
+								@include font-size(60, vw);
+							}
+						}
+					}
+				}
+
+				.middle-section{
+					@include size-class(all-desktop) {
+						width: span(12);
+						margin: 0 auto;
+						padding-top: 20px;
+					}
+					.middle-info{
+						@include size-class(all-desktop) {
+							width: span(6);
+							margin: 0 auto;
+							padding-bottom: 20px;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
+							padding-bottom: 20px;
+						}
+						@include size-class(compact) {
+							width: span(4);
+							padding-bottom: 20px;
+						}
+					}
+					.slide{
+						@include size-class(all-desktop) {
+							width: span(8);
+							margin: 0 auto;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
+						}
+						@include size-class(compact) {
+							width: span(4);
+						}
+						.slick-prev{
+							cursor: pointer;
+							top: 40%;
+							left: 10%;
+							width: 48px;
+							height: 79px;
+							background: url('../images/arrow-left.png') no-repeat;
+							z-index: 1;
+							font-size: 0;
+							line-height: 0;
+							position: absolute;
+							padding: 0;
+							cursor: pointer;
+							border: none;
+							display: block;
+							background-size: 48px 79px;
+							opacity: 1;
+							-webkit-transform: translateY(0);
+							-moz-transform: translateY(0);
+							-ms-transform: translateY(0);
+							-o-transform: translateY(0);
+							transform: translateY(0);
+
+							@include size-class(compact) {
+								@include size-class(compact) {
+								  margin: 17px;
+								  top: 39%;
+								  left: 16px;
+								  width: 24px;
+								  height: 39px;
+								  background-size: 24px 39px;
+								}
+							}
+						}
+						.slick-next{
+							cursor: pointer;
+							top: 40%;
+							left: auto;
+							right:10%;
+							width: 48px;
+							height: 79px;
+							background: url('../images/arrow-right.png') no-repeat;
+							z-index: 1;
+							font-size: 0;
+							line-height: 0;
+							position: absolute;
+							padding: 0;
+							cursor: pointer;
+							border: none;
+							display: block;
+							background-size: 48px 79px;
+							opacity: 1;
+							-webkit-transform: translateY(0);
+							-moz-transform: translateY(0);
+							-ms-transform: translateY(0);
+							-o-transform: translateY(0);
+							transform: translateY(0);
+							@include size-class(compact) {
+							  margin: 17px;
+							  top: 39%;
+							  right: 16px;
+							  width: 24px;
+							  height: 39px;
+								background-size: 24px 39px;
+							}
+						}
+						.slick-dots{
+								margin-top: 0;
+							li{
+								width: 10px;
+								height: 10px;
+								border-radius: 100%;
+								margin-right: 10px;
+								background-color: #ffffff;
+								@include transition(all 0.5s ease);
+
+								&.slick-active{
+									background-color: #8c80ff;
+								}
+
+								&:last-child{
+									margin: 0;
+								}
+
+								button:before{
+									display: none;
+								}
+							}
+							@include size-class(compact) {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								margin: auto;
+							}
+						}
+					}
+					.bottom-section{
+						@include size-class(all-desktop) {
+							width: span(6.2);
+							margin: 0 auto;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
+						}
+						@include size-class(compact) {
+							width: span(4);
+						}
+					}
+				}
+
+			}
+
+		}
+
+
 
 
 		// Additional styles for slick carousel dots.
-		.slick-dots{
-			margin-top: 0;
 
-			li{
-				width: 10px;
-				height: 10px;
-				border: 1px #000000 solid;
-				border-radius: 100%;
-				margin-right: 10px;
-				@include transition(all 0.5s ease);
 
-				&.slick-active{
-					background-color: #000000;
-				}
-
-				&:last-child{
-					margin: 0;
-				}
-
-				button:before{
-					display: none;
-				}
-			}
-		}
+		// .slick-dots{
+		// 	margin-top: 0;
+		// 	li{
+		// 		width: 10px;
+		// 		height: 10px;
+		// 		border: 1px #000000 solid;
+		// 		border-radius: 100%;
+		// 		margin-right: 10px;
+		// 		@include transition(all 0.5s ease);
+		//
+		// 		&.slick-active{
+		// 			background-color: #000000;
+		// 		}
+		//
+		// 		&:last-child{
+		// 			margin: 0;
+		// 		}
+		//
+		// 		button:before{
+		// 			display: none;
+		// 		}
+		// 	}
+		// 	@include size-class(compact) {
+		// 	 	position: absolute;
+		// 		bottom: 0;
+		// 		left: 0;
+		// 		right: 0;
+		// 		margin: auto;
+		// 	}
+		// }
 	    // End Example Code
 
 	    // Un-comment to enable Size Class Grid Debug

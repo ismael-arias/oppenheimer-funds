@@ -89,7 +89,8 @@
 
 		<div class="middle-content content">
 			<h2>{{{ index.section4.copy2.paragraphs }}}</h2>
-			<div class="facial-box">
+			<h2>{{{ index.section4.copy2-1.paragraphs }}}</h2>
+			<div id="facial-box-container" class="facial-box">
 			    <div class="img-box">
 						{{> facial1 }}
 					</div>
@@ -156,6 +157,41 @@
 			</div>
 
 		</div>
+
+	</div>
+</section>
+
+<section id="section6" class="section6" tracking="Sixth Section">
+	<div class="section-container">
+
+		<div class="section-title">
+			<h1>{{ index.section6.title}}</h1>
+		</div>
+
+		<div class="section-top">
+			{{> heart }}
+			<div class="subtitle">
+				<p>{{{ index.section6.subtitle }}}</p>
+			</div>
+		</div>
+
+		<div class="middle-section content">
+			<div class="middle-info">
+				<p>{{{ index.section6.copy.paragraphs }}}</p>
+			</div>
+
+			<div id="slide" class="slide">
+				{{> slideshow index.section6.slideshow }}
+			</div>
+
+			<div class="bottom-section">
+				<p>{{{ index.section6.copy1.paragraphs }}}</p>
+			</div>
+
+
+		</div>
+
+
 
 	</div>
 </section>

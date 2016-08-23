@@ -11,8 +11,8 @@ require.config({
         ScrollMagicGSAP: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min',
         'Snap.svg': 'https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min',
         'slick-carousel': 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min',
-        JKSizeClassEventHandler: 'oppenheimer_from-man-to-machine/bower_components/JKSizeClassEventHandler/js/JKSizeClassEventHandler.min',
-        SupportsContinuousScrollEvents: 'oppenheimer_from-man-to-machine/bower_components/SupportsContinuousScrollEvents/js/SupportsContinuousScrollEvents.min',
+        JKSizeClassEventHandler: PaidPost.assets + 'bower_components/JKSizeClassEventHandler/js/JKSizeClassEventHandler.min',
+        SupportsContinuousScrollEvents: PaidPost.assets + 'bower_components/SupportsContinuousScrollEvents/js/SupportsContinuousScrollEvents.min',
 
         'testlib' : PaidPost.assets + 'js/lib/TestLib'
     },

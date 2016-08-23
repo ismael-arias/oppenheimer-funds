@@ -4,30 +4,74 @@ $mobile-landscape: 480px; // 480px
 $tablet-wide: 768px; // 768px
 $desktop-wide: 1220px; // 768px
 
-.green{
-  height: 6px;
-  color: #79f2ec;
-  background-color: #79f2ec;
-  border: none;
-  margin: 0;
+#shine_x5F_hand{opacity: 0;}
+
+#hand_elem_1, #hand_elem_2, #heart_elem_1, #heart_elem_2{
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -o-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
 }
 
-.blue{
-  @extend .green;
-  color: #31c2fd;
-  background-color: #31c2fd;
+// Making the Eye
+.toBeMasked{
+    -webkit-clip-path: inset(0% 0 0% 0%);
+    clip-path: inset(0% 0 0% 0%);
+
 }
 
-@mixin svg-container {
-	position: relative;
+// Hunter
+#hunter{
 
-	svg {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-	}
+    #Arm_x5F_2{
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -o-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+    }
+
+    #Signal_x5F_1_start, #Signal_x5F_2, #Signal_x5F_3{opacity: 0;}
+}
+
+#explorer_man{
+    #man_explorer_move{
+        -webkit-transform: translateY(70px);
+        -moz-transform: translateY(70px);
+        -o-transform: translateY(70px);
+        -ms-transform: translateY(70px);
+        transform: translateY(70px);
+    }
+}
+
+//Ship Sonar
+#ship_sonar{
+
+    #Right_1{ stroke-dasharray:51; stroke-dashoffset:-51;}
+    #Left_1{ stroke-dasharray:51; stroke-dashoffset:51; }
+
+    #Right_2{ stroke-dasharray:70; stroke-dashoffset:-70;}
+    #Left_2{ stroke-dasharray:70; stroke-dashoffset:70; }
+
+    #Right_3{ stroke-dasharray:100; stroke-dashoffset:100;}
+    #Left_3{ stroke-dasharray:100; stroke-dashoffset:-100; }
+
+    #Right_4{ stroke-dasharray:130; stroke-dashoffset:130;}
+    #Left_4{ stroke-dasharray:130; stroke-dashoffset:-130; }
+}
+
+#face1_wrapper{
+    cursor: pointer;
+    #Horizontal_f1, #Vertical_f1{opacity: 0;}
+}
+
+#face2_wrapper{
+    cursor: pointer;
+    #curve_lines_f2, #Smile_x5F_Face{opacity: 0;}
+}
+
+#face3_wrapper{
+    cursor: pointer;
+    #Black_x5F_dots, #Blue_x5F_Dots{opacity: 0;}
 }

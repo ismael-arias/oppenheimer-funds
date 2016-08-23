@@ -85,35 +85,46 @@
 
 			// Media-Query targeting desktop
 			.text-container1{
-				@include size-class(regular) {
+				@include size-class(all-desktop) {
 					width: span(6);
 					margin: 0 auto;
 				}
 				@include size-class(tablet-portrait) {
 					width: span(6);
 				}
-				.dropcap{
-					position: relative;
-					top: -15px;
-					float: left;
-					font-size: 2.9em;
-					padding: 0 60px 0 24px;
-					font-weight: 600;
-					@media screen and (max-width: $mobile-landscape){
-						font-size: 2.9em;
-						padding: 0 25px 0 24px;
+				@include size-class(compact) {
+					width: span(4);
+				}
+				p{
+					@include size-class(all-desktop) {
+						@include font-size(42, vw, 42);
 					}
-					&::after{
-						content: " ";
-						position: absolute;
-						left: 7px;
-						bottom: 0;
-						width: 66%;
-						height: 4px;
-						background-color: #61d3b1;
+					.dropcap{
+						position: relative;
+				    top: -8px;
+				    float: left;
+				    font-size: 2.9em;
+						padding: 0 60px 8px 24px;
+						font-weight: 600;
+						line-height: 1em;
+						@include size-class(compact) {
+							top: -5px;
+							font-size: 2.9em;
+							padding: 0 40px 0 24px;
+						}
+						&::after{
+							content: " ";
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							width: 78%;
+							height: 4px;
+							background-color: #61d3b1;
+						}
 					}
 				}
 			}
+
 		}
 
 		.section2{
@@ -181,6 +192,7 @@
 								@include size-class(all-desktop) {
 								  width: 80%;
 								  height: 100%;
+									padding: 5px;
 								}
 								@include size-class(tablet-portrait) {
 									width: 90%;
@@ -254,7 +266,7 @@
 						width: span(12);
 						margin: 0 auto;
 						position: absolute;
-						top: 16vw;
+						top: 10vw;
 						left: 0;
 						text-align: center;
 						z-index: 1;
@@ -269,11 +281,8 @@
 							color: #feffff;
 							opacity: 0.1;
 							text-align: center;
-							line-height: 1em;
+							line-height: 2em;
 						}
-						// @include size-class(regular) {
-						// 	font-size: em(200);
-						// }
 					}
 				}
 
@@ -284,18 +293,26 @@
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
-							width: span(1.5);
+							width: span(1);
 							margin: 0 auto;
 						}
 						@include size-class(compact) {
 							width: span(1);
 						}
 					}
+					svg{
+						@include size-class(all-desktop) {
+							width: 100%;
+							height: 100%;
+						}
+
+					}
+
 					.subtitle{
 						@include size-class(all-desktop) {
 							width: span(8);
 							margin: 0 auto;
-							padding: span(0.5) 0;
+							padding: span(0.3) 0;
 							text-align: center;
 						}
 						@include size-class(tablet-portrait) {
@@ -367,7 +384,7 @@
 							left: 65px
 						}
 						@include size-class(tablet-portrait) {
-							width: span(2);
+							width: span(4);
 							margin: 0 auto;
 							position: inherit;
 							top: 0;
@@ -376,7 +393,7 @@
 						}
 
 						@include size-class(compact) {
-							width: span(2);
+							width: span(3);
 							margin: 0 auto;
 							position: inherit;
 							top: 0;
@@ -473,10 +490,10 @@
 
 					.svg-container{
 						@include size-class(all-desktop) {
-							width: span(8);
+							width: span(10);
 							position: absolute;
-							top: 30px;
-							right: -135px;
+							top: 4px;
+							right: -230px;
 						}
 						@include size-class(tablet-portrait) {
 							width: span(6);
@@ -630,7 +647,7 @@
 								@include font-size(70, vw) {
 									font-weight: 600;
 									line-height: em(36);
-									color: #4da0ff;
+									color: #36C1F9;
 									letter-spacing: 2px;
 								}
 							}
@@ -642,31 +659,107 @@
 				}
 
 				.section-info{
-					@include size-class(all-desktop) {
-						width: span(12);
-						z-index: 2;
-					}
-					@include size-class(compact) {
-						width: span(4);
-					}
 					.top-info{
 						@include size-class(all-desktop) {
 							width: span(6);
-							margin: 0 auto;
-							padding: 0;
-							@include font-size(43, vw);
-						}
-						@include size-class(tablet-portrait) {
-							width: span(6);
-						}
-						@include size-class(compact) {
-							width: span(4);
 						}
 						p{
 							@include size-class(all-desktop) {
-							  letter-spacing: 0.5px;
+								@include font-size(37, vw, 37);
+								line-height: 1.2;
+							}
+
+						}
+					}
+				}
+
+				.middle-content{
+					@include size-class(all-desktop) {
+						width: span(12);
+						@include full-bleed;
+						padding-top: 40px;
+						padding-bottom: 20px;
+						background-color: #36c1f9;
+					}
+					h2{
+						@include size-class(all-desktop) {
+							color: #ffffff;
+							line-height: 1em;
+							text-align: center;
+							margin-bottom: 20px;
+						}
+
+					}
+					.facial-box{
+						@include size-class(all-desktop) {
+							width: span(10);
+							margin: 0 auto;
+							height: 17vw;
+							display: -webkit-box;
+							display: -moz-box;
+							display: box;
+							display: -webkit-flex;
+							display: -moz-flex;
+							display: -ms-flexbox;
+							display: flex;
+							margin-bottom: 30px;
+						}
+						.img-box{
+							@include size-class(all-desktop) {
+								-webkit-box-flex: 0;
+						    -moz-box-flex: 0;
+						    box-flex: 0;
+						    -webkit-flex: 0 1 100%;
+						    -moz-flex: 0 1 100%;
+						    -ms-flex: 0 1 100%;
+						    flex: 1 4% 100%;
+						    padding: 0% 1%;
+
+
+							}
+							.svg-container{
+								@include size-class(all-desktop) {
+									position: relative;
+								}
+								svg{
+									@include size-class(all-desktop) {
+										height: 100%;
+										width: 100%;
+										max-height: 55%;
+										display: block;
+									}
+									@include size-class(tablet-portrait) {
+										width: 90%;
+									}
+
+								}
+
 							}
 						}
+					}
+					.facial-info{
+						@include size-class(all-desktop) {
+							width: span(4);
+							margin: 0 auto;
+							text-align: center;
+						}
+						p{
+							@include size-class(all-desktop) {
+								text-align: center;
+								@include font-size(30, vw, 30);
+							}
+						}
+					}
+
+				}
+
+				.bottom-content{
+					@include size-class(all-desktop) {
+						width: span(6);
+						margin: 0 auto;
+						color: #ffffff;
+						padding: span(.5) 0;
+
 					}
 				}
 

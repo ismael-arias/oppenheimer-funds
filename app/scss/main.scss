@@ -231,7 +231,7 @@
 					padding-top: 50px;
 				}
 				@include size-class(tablet-portrait) {
-					width: span(6);
+					width: span(8);
 				}
 				@include size-class(compact) {
 					display: none;
@@ -281,7 +281,7 @@
 							color: #feffff;
 							opacity: 0.1;
 							text-align: center;
-							line-height: 2em;
+							line-height: 1em;
 						}
 					}
 				}
@@ -353,7 +353,7 @@
 							@include font-size(43, vw);
 						}
 						@include size-class(tablet-portrait) {
-							width: span(6);
+							width: span(8);
 						}
 						@include size-class(compact) {
 							width: span(4);
@@ -384,7 +384,7 @@
 							left: 65px
 						}
 						@include size-class(tablet-portrait) {
-							width: span(4);
+							width: span(2);
 							margin: 0 auto;
 							position: inherit;
 							top: 0;
@@ -417,7 +417,7 @@
 							}
 							@include size-class(tablet-portrait) {
 								width: span(8);
-								@include font-size(32, vw, 32) {
+								@include font-size(26, vw, 26) {
 									text-align: left;
 									line-height: 1.1;
 
@@ -433,7 +433,7 @@
 							margin: 0 auto;
 						}
 						@include size-class(tablet-portrait) {
-							width: span(6);
+							width: span(8);
 						}
 						@include size-class(compact) {
 							width: span(4);
@@ -451,7 +451,7 @@
 						z-index: 2;
 					}
 					@include size-class(tablet-portrait) {
-						width: span(6);
+						width: span(8);
 					}
 					@include size-class(compact) {
 						width: span(4);
@@ -573,7 +573,7 @@
 
 		.section4{
 			@include full-bleed;
-			background-color: #2f2f2f;
+			background-color: #000000;
 			border-bottom: 5px solid #4da0ff;
 			position: relative;
 			@include size-class(all-desktop) {
@@ -663,6 +663,12 @@
 						@include size-class(all-desktop) {
 							width: span(6);
 						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
+						}
+						@include size-class(compact) {
+							width: span(4);
+						}
 						p{
 							@include size-class(all-desktop) {
 								@include font-size(37, vw, 37);
@@ -743,6 +749,12 @@
 							margin: 0 auto;
 							text-align: center;
 						}
+						@include size-class(tablet-portrait) {
+							width: span(5);
+						}
+						@include size-class(compact) {
+							width: span(3);
+						}
 						p{
 							@include size-class(all-desktop) {
 								text-align: center;
@@ -760,6 +772,12 @@
 						color: #ffffff;
 						padding: span(.5) 0;
 
+					}
+					@include size-class(tablet-portrait) {
+						width: span(8);
+					}
+					@include size-class(compact) {
+						width: span(4);
 					}
 				}
 
@@ -869,7 +887,7 @@
 							@include font-size(43, vw);
 						}
 						@include size-class(tablet-portrait) {
-							width: span(6);
+							width: span(8);
 						}
 						@include size-class(compact) {
 							width: span(4);
@@ -887,6 +905,10 @@
 						width: span(12);
 						z-index: 2;
 						position: relative;
+					}
+					@include size-class(tablet-portrait) {
+						width: span(8);
+						margin: 0 auto;
 					}
 					@include size-class(compact) {
 						width: span(4);
@@ -975,16 +997,14 @@
 						}
 					}
 
-					.center-info{
+					.center{
 						@include size-class(all-desktop) {
 							padding: 0;
 							width: span(12);
-							@include font-size() {
-
-							}
 						}
 						@include size-class(tablet-portrait) {
-							width: span(6);
+							width: span(8);
+							margin: 0 auto;
 						}
 						@include size-class(compact) {
 							width: span(4);
@@ -992,25 +1012,100 @@
 						.svg-container{
 							@include size-class(all-desktop) {
 								width: span(4);
-								margin: 0 auto;
+								margin: 30px auto;
 							}
-
+							@include size-class(compact) {
+								width: span(4);
+							}
 						}
-
-						.bottom-info{
+						.info{
 							@include size-class(all-desktop) {
 								width: span(6);
 								margin: 0 auto;
 							}
-
+							@include size-class(tablet-portrait) {
+								width: span(8);
+								margin: 0 auto;
+							}
+							@include size-class(compact) {
+								width: span(4);
+								margin-top: 10px;
+							}
 						}
 
+					}
+
+					.bottom-info{
+						@include size-class(all-desktop) {
+							width: span(6);
+							margin: 0 auto;
+							padding-top: 6px;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
+							margin: 0 auto;
+						}
+						@include size-class(compact) {
+							width: span(4);
+						}
+						.svg-container{
+							@include size-class(all-desktop) {
+								width: span(2);
+								position: absolute;
+								top: -85px;
+								right: 0;
+							}
+							@include size-class(tablet-portrait) {
+								width: span(3);
+								margin: 0 auto;
+								position: inherit;
+								top: 0;
+								left: 0;
+								margin-bottom: 35px;
+							}
+
+							@include size-class(compact) {
+								width: span(3);
+								margin: 0 auto;
+								position: inherit;
+								top: 0;
+								left: 0;
+								margin-bottom: 35px;
+							}
+							svg{
+								@include size-class(all-desktop) {
+									width: 100%;
+									height: 100%;
+								}
+
+							}
+							figcaption{
+								@include size-class(all-desktop) {
+									width: span(7);
+									margin: 0 auto;
+									margin-top: -30px;
+									color: #ffffff;
+									text-align: center;
+								}
+								@include size-class(tablet-portrait) {
+									width: span(8);
+									margin-top: 22px;
+									@include font-size(28, vw, 28) {
+										text-align: left;
+										line-height: 1.1;
+
+									}
+								}
+							}
+						}
 					}
 
 				}
 
 			}
+
 		}
+
 
 
 		// Additional styles for slick carousel dots.

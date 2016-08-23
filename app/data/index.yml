@@ -58,7 +58,6 @@ section2:
           opportunities in myriad fields that previously had never imaged
           using such technology.
 
-
 section2-paragraph:
   parags:
     text:
@@ -251,14 +250,16 @@ section5:
       every billion (109), the chances of two people having identical irises
       is about drastically smaller (1078). Iris scanners have another major
       advantage over other biometric identification systems because,
-      unlike faces and voices, irises don’t significantly change with age.<br /><br />
+      unlike faces and voices, irises don’t significantly change with age.
 
-      Iris recognition generally requires subjects to stay still and in close
-      proximity to the scanner says Woodard, but that may change soon.
-      Emerging research focused on long-range detection and
-      video-based identification systems have the potential to
-      revolutionize how iris scanning is used in security, identification and
-      medical contexts.
+  copy3:
+    paragraphs: |
+        Iris recognition generally requires subjects to stay still and in close
+        proximity to the scanner says Woodard, but that may change soon.
+        Emerging research focused on long-range detection and
+        video-based identification systems have the potential to
+        revolutionize how iris scanning is used in security, identification and
+        medical contexts.
 
 
 # section1:

@@ -27,8 +27,6 @@ console.log("From TestLib ->", testlib);
 console.log("Hello world!", $("body"));
 console.log("XXXXXXXXX");
 
-
-
 // Add Slick Carousels
 // Library Source and Docs: http://kenwheeler.github.io/slick/
 $('.pp-slideshow').slick();

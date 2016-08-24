@@ -320,42 +320,10 @@ section6:
         caption: "Image 2 caption"
         caption: "Image 3 caption"
 
-
-
-# section1:
-#   title: "Section One"
-#   slideshow:
-#     title: "Slideshow | Section One"
-#     images:
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 1"
-#         caption: "Image 1 caption"
-#
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 2"
-#         caption: "Image 2 caption"
-#
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 3"
-#         caption: "Image 3 caption"
-#
-#   paragraphs: |
-#     Here are some paragraphs.
-#     Each paragraph is separated by a line break.
-#
-# section2:
-#   title: "Section Two"
-#   slideshow:
-#     title: "Slideshow | Section Two"
-#     images:
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 1"
-#         caption: "Image 1 caption"
-#
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 2"
-#         caption: "Image 2 caption"
-#
-#       - image: "https://placehold.it/1024x768"
-#         title: "Image 3"
-#         caption: "Image 3 caption"
+section7:
+  copy:
+    paragraphs: |
+      See how biometrics can lead to a
+      smarter investing future with OppenheimerFunds,
+       The Right Way to Invest.
+    image: "../images/logo-footer.png"

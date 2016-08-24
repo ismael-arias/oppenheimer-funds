@@ -79,6 +79,7 @@
 						color: #ffffff;
 						line-height: em(42);
 						letter-spacing: 1px;
+						font-family: "Open Sans";
 					}
 				}
 			}
@@ -269,7 +270,7 @@
 						width: span(12);
 						margin: 0 auto;
 						position: absolute;
-						top: 10vw;
+						top: 9vw;
 						left: 0;
 						text-align: center;
 						z-index: 1;
@@ -382,7 +383,7 @@
 
 					.svg-container{
 						@include size-class(all-desktop) {
-							width: span(1);
+							width: span(2);
 							position: absolute;
 							top: -85px;
 							left: 65px
@@ -592,7 +593,7 @@
 						width: span(12);
 						margin: 0 auto;
 						position: absolute;
-						top: 11vw;
+						top: 8vw;
 						left: 0;
 						text-align: center;
 						z-index: 1;
@@ -666,6 +667,7 @@
 					.top-info{
 						@include size-class(all-desktop) {
 							width: span(6);
+							padding: 0;
 						}
 						@include size-class(tablet-portrait) {
 							width: span(8);
@@ -1092,7 +1094,7 @@
 								@include size-class(all-desktop) {
 									width: span(7.8);
 									margin: 0 auto;
-									margin-top: 10px;
+									margin-top: -30px;
 									color: #ffffff;
 									text-align: center;
 									// @include font-size(30);
@@ -1195,7 +1197,7 @@
 								@include size-class(all-desktop) {
 									width: span(7);
 									margin: 0 auto;
-									margin-top: -30px;
+									margin-top: 5px;
 									color: #ffffff;
 									text-align: center;
 								}
@@ -1234,7 +1236,7 @@
 						width: span(12);
 						margin: 0 auto;
 						position: absolute;
-						top: 13vw;
+						top: 10vw;
 						left: 0;
 						text-align: center;
 						z-index: 1;
@@ -1450,6 +1452,109 @@
 
 			}
 
+		}
+
+		.section7{
+			@include full-bleed;
+			background: url("../images/footer.png");
+			position: relative;
+			@include size-class(all-desktop) {
+				padding-top: span(1);
+			}
+			@include size-class(compact) {
+				padding: span(.6);
+			}
+			.section-container{
+				@include size-class(all-desktop) {
+					width: span(12);
+				}
+				.open-logo{
+					@include size-class(all-desktop) {
+						width: span(3);
+						position: absolute;
+						right: 22%;
+						bottom: 20%;
+					}
+					@include size-class(regular) {
+						width: span(3);
+					}
+					@include size-class(tablet-portrait) {
+						width: span(3);
+						right: 11%;
+						bottom: 14%;
+					}
+					@include size-class(compact) {
+						width: span(3);
+						position:absolute;
+						right: 0;
+						left: 0;
+						bottom: 25px;
+						margin: 0 auto;
+					}
+				}
+
+				.text-footer-container{
+					@include size-class(all-desktop) {
+						width: span(6);
+						margin: 0 auto;
+						padding: span(1) 0;
+						padding-top: 0;
+						position: relative;
+					}
+					@include size-class(regular) {
+						width: span(7);
+					}
+					@include size-class(tablet-portrait) {
+						width: span(8);
+					}
+					@include size-class(compact) {
+						width: span(4);
+						padding: span(1.2) 0;
+						padding-top: 0;
+					}
+					p{
+						@include size-class(all-desktop) {
+							@include font-size(64, vw, 64) {
+								line-height: em(66);
+								letter-spacing: 1px;
+								padding-bottom: 20px;
+								font-family: "Open Sans";
+								font-weight: 300;
+								color: #fff;
+								text-align: center;
+							}
+						}
+						@include size-class(regular) {
+							@include font-size(60, vw, 60);
+						}
+
+					}
+					button{
+						@include size-class(all-desktop) {
+							border: 2px solid #ffffff;
+							border-radius: 5px;
+							background-color: transparent;
+							@include font-size(36, vw, 36) {
+								line-height: em(36);
+								font-family: "Open Sans";
+								font-weight: 800;
+								padding: 12px 60px;
+								letter-spacing: 0.09em;
+								color: #fff;
+								text-transform: uppercase;
+								text-align: center;
+							}
+							@include size-class(compact) {
+								margin: auto;
+								display: block;
+
+							}
+						}
+					}
+				}
+
+
+			}
 		}
 
 

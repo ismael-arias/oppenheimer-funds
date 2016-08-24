@@ -131,6 +131,216 @@ window.scEventHandler.on("sizeClassChange", function() {
 //############################
 var tl = new TimelineLite();
 
+// Controller
+var controller = new ScrollMagic.Controller();
+
+// set somes animations for contents
+TweenMax.set($('.text-container1, .text-container2, .text11'), {opacity: 0, transform:'translate3d(0,50px,0)'});
+TweenMax.set($('.text3, .text5'), {opacity: 0, transform:'translate3d(-50px,0px,0)'});
+TweenMax.set($('.text4, .text13'), {opacity: 0, transform:'translate3d(50px,0px,0)'});
+TweenMax.set($('#touchIcon'), {opacity: 0, transform:'translate3d(-50px,0px,0)'});
+TweenMax.set($('.text6, .text7'), {opacity: 0, transform:'translate3d(0px,0px,0)'});
+TweenMax.set($('.text8, .text9, .text12'), {opacity: 0, transform:'translate3d(0px,50px,0)'});
+TweenMax.set($('.text10'), {opacity: 0, transform:'translate3d(0px,-50px,0)'});
+
+// parallax effect for the titles
+TweenMax.set($('.touch_parallax, .facial_parallax, .iris_parallax, .heart_parallax'), {transform:'translate3d(0px,-80px,0)'});
+
+var text1Ani = new TimelineLite();
+  text1Ani.to($('.text-container1'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text1 = new ScrollMagic.Scene({
+        triggerElement: ".text-container1",
+        triggerHook: 'onEnter', offset: 203
+    })
+    .setTween(text1Ani)
+    .addTo(controller);
+// text 2
+var text2Ani = new TimelineLite();
+  text2Ani.to($('.text-container2'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text2 = new ScrollMagic.Scene({
+        triggerElement: ".text-container2",
+        triggerHook: 'onEnter', offset: 203
+    })
+    .setTween(text2Ani)
+    .addTo(controller);
+// text 3
+var text3Ani = new TimelineLite();
+  text3Ani.to($('.text3'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text3 = new ScrollMagic.Scene({
+          triggerElement: ".text3",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text3Ani)
+      .addTo(controller);
+// text 4
+var text4Ani = new TimelineLite();
+  text3Ani.to($('.text4'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text4 = new ScrollMagic.Scene({
+          triggerElement: ".text4",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text4Ani)
+      .addTo(controller);
+// touch ID fade animation "not svg animation"
+var touchAniFade = new TimelineLite();
+    touchAniFade.to($('#touchIcon'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+    var scene_touchFade = new ScrollMagic.Scene({
+          triggerElement: "#touchIcon",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(touchAniFade)
+      .addTo(controller);
+
+// text 5
+var text5Ani = new TimelineLite();
+  text5Ani.to($('.text5'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text5 = new ScrollMagic.Scene({
+          triggerElement: ".text5",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text5Ani)
+      .addTo(controller);
+
+// text 6
+var text6Ani = new TimelineLite();
+  text6Ani.to($('.text6'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text6 = new ScrollMagic.Scene({
+          triggerElement: ".text6",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text6Ani)
+      .addTo(controller);
+
+// text 7
+var text7Ani = new TimelineLite();
+  text7Ani.to($('.text7'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text7 = new ScrollMagic.Scene({
+          triggerElement: ".text7",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text7Ani)
+      .addTo(controller);
+
+// text 8
+var text8Ani = new TimelineLite();
+  text8Ani.to($('.text8'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text8 = new ScrollMagic.Scene({
+          triggerElement: ".text8",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text8Ani)
+      .addTo(controller);
+
+// text 9
+var text9Ani = new TimelineLite();
+  text9Ani.to($('.text9'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text9 = new ScrollMagic.Scene({
+          triggerElement: ".text9",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text9Ani)
+      .addTo(controller);
+
+// text 10
+var text10Ani = new TimelineLite();
+  text10Ani.to($('.text10'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text10 = new ScrollMagic.Scene({
+          triggerElement: ".text10",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text10Ani)
+      .addTo(controller);
+
+// text 11
+var text11Ani = new TimelineLite();
+  text11Ani.to($('.text11'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text11 = new ScrollMagic.Scene({
+          triggerElement: ".text11",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text11Ani)
+      .addTo(controller);
+
+// text 12
+var text12Ani = new TimelineLite();
+  text12Ani.to($('.text12'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text12 = new ScrollMagic.Scene({
+          triggerElement: ".text12",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text12Ani)
+      .addTo(controller);
+
+// text 13
+var text13Ani = new TimelineLite();
+  text13Ani.to($('.text13'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
+
+  var scene_text13 = new ScrollMagic.Scene({
+          triggerElement: ".text13",
+          triggerHook: 'onEnter', offset: 203
+      })
+      .setTween(text13Ani)
+      .addTo(controller);
+
+
+// Parallax for tittles
+// touch parallax
+var touch_paralaxAni = new TimelineLite();
+  touch_paralaxAni.to($('.touch_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+
+  var scene_touch_parallax = new ScrollMagic.Scene({
+          triggerElement: ".touch_parallax",
+          triggerHook: 'onEnter', triggerOffset: 500, duration: 600
+      })
+      .setTween(touch_paralaxAni)
+      .addTo(controller);
+
+// facial parallax
+var facial_paralaxAni = new TimelineLite();
+  facial_paralaxAni.to($('.facial_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+
+  var scene_facial_parallax = new ScrollMagic.Scene({
+          triggerElement: ".facial_parallax",
+          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+      })
+      .setTween(facial_paralaxAni)
+      .addTo(controller);
+
+// iris parallax
+var iris_paralaxAni = new TimelineLite();
+  iris_paralaxAni.to($('.iris_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+
+  var scene_iris_parallax = new ScrollMagic.Scene({
+          triggerElement: ".iris_parallax",
+          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+      })
+      .setTween(iris_paralaxAni)
+      .addTo(controller);
+
+// iris parallax
+var heart_paralaxAni = new TimelineLite();
+  heart_paralaxAni.to($('.heart_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+
+  var scene_heart_parallax = new ScrollMagic.Scene({
+          triggerElement: ".heart_parallax",
+          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+      })
+      .setTween(heart_paralaxAni)
+      .addTo(controller);
+
 //Set start positions for some elements
 TweenMax.set($('#line_1, #line_2, #line_3, #line_4, #line_5'), {
     opacity: 0,
@@ -267,8 +477,7 @@ $("#face4_wrapper").mouseleave(function() {
 
 // Start with Scroll Magic
 
-// Controller
-var controller = new ScrollMagic.Controller();
+
 
 
 // Eye Animations

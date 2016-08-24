@@ -30,7 +30,7 @@
 <section id="section3" class="section3" tracking="Third Section">
 	<div class="section-container">
 		<div class="section-title">
-			<h1>{{ index.section3.title}}</h1>
+			<h1 class="touch_parallax">{{ index.section3.title}}</h1>
 		</div>
 		<div class="section-top">
 			{{> touch_sensitivity }}
@@ -41,22 +41,22 @@
 
 		<div class="section-info">
 			<div class="top-info content">
-				<p>{{ index.section3.paragraphs}}</p>
+				<p class="text3">{{ index.section3.paragraphs}}</p>
 			</div>
 
 			<div class="middle-info">
 					{{> touch-icon }}
 				<div class="center-info content">
-					<p>{{ index.section3.copy.paragraphs}}</p>
+					<p class="text4">{{ index.section3.copy.paragraphs}}</p>
 				</div>
 			</div>
 
 			<div class="bottom-info content">
 				<div class="pullquote">
-					<p>{{ index.section3.copy2.paragraphs}}</p>
+					<p class="text5">{{ index.section3.copy2.paragraphs}}</p>
 				</div>
 				{{> hands_human }}
-				<div class="bottom-copy">
+				<div class="bottom-copy text6">
 					<p>{{ index.section3.copy3.paragraphs}}</p>
 					<p>{{{ index.section3.copy4.paragraphs }}}</p>
 					<p>{{{ index.section3.copy5.paragraphs }}}</p>
@@ -71,7 +71,7 @@
 	<div class="section-container">
 
 		<div class="section-title">
-			<h1>{{ index.section4.title}}</h1>
+			<h1 class="facial_parallax">{{ index.section4.title}}</h1>
 		</div>
 
 		<div class="section-top">
@@ -83,7 +83,7 @@
 
 		<div class="section-info">
 			<div class="top-info content">
-				<p>{{{ index.section4.copy.paragraphs }}}</p>
+				<p class="text7">{{{ index.section4.copy.paragraphs }}}</p>
 			</div>
 		</div>
 
@@ -110,7 +110,7 @@
 		</div>
 
 		<div class="bottom-content content">
-			<p>{{{ index.section4.copy4.paragraphs }}}</p>
+			<p class="text8">{{{ index.section4.copy4.paragraphs }}}</p>
 		</div>
 
 	</div>
@@ -121,7 +121,7 @@
 	<div class="section-container">
 
 		<div class="section-title">
-			<h1>{{ index.section5.title}}</h1>
+			<h1 class="iris_parallax">{{ index.section5.title}}</h1>
 		</div>
 
 		<div class="section-top">
@@ -133,25 +133,25 @@
 
 		<div class="section-info">
 			<div class="top-info content">
-				<p>{{{ index.section5.copy.paragraphs }}}</p>
+				<p class="text9">{{{ index.section5.copy.paragraphs }}}</p>
 			</div>
 
 			<div class="middle-info">
 				<div class="pullquote">
-					<p>{{ index.section5.copy1.paragraphs}}</p>
+					<p class="text10">{{ index.section5.copy1.paragraphs}}</p>
 
 				</div>
 
 				<div class="center content">
 					{{> eyes_mask }}
 					<div class="info">
-						<p>{{{ index.section5.copy2.paragraphs }}}</p>
+						<p class="text11">{{{ index.section5.copy2.paragraphs }}}</p>
 					</div>
 				</div>
 
 				<div class="bottom-info content">
 					{{> planets }}
-					<p>{{{ index.section5.copy3.paragraphs }}}</p>
+					<p class="text11">{{{ index.section5.copy3.paragraphs }}}</p>
 				</div>
 
 			</div>
@@ -165,7 +165,7 @@
 	<div class="section-container">
 
 		<div class="section-title">
-			<h1>{{ index.section6.title}}</h1>
+			<h1 class="heart_parallax">{{ index.section6.title}}</h1>
 		</div>
 
 		<div class="section-top">
@@ -177,7 +177,7 @@
 
 		<div class="middle-section content">
 			<div class="middle-info">
-				<p>{{{ index.section6.copy.paragraphs }}}</p>
+				<p class="text12">{{{ index.section6.copy.paragraphs }}}</p>
 			</div>
 
 			<div id="slide" class="slide">
@@ -185,13 +185,33 @@
 			</div>
 
 			<div class="bottom-section">
-				<p>{{{ index.section6.copy1.paragraphs }}}</p>
+				<p class="text13">{{{ index.section6.copy1.paragraphs }}}</p>
 			</div>
 
 
 		</div>
 
 
+
+	</div>
+</section>
+
+<section id="section7" class="section7" tracking="Seventh Section">
+	<div class="section-container">
+
+		<div class="footer-container">
+			<div class="open-logo">
+				<img src="{{ index.section7.copy.image }}" alt="">
+			</div>
+
+			<div class="text-footer-container content">
+				<p>{{{ index.section7.copy.paragraphs }}}</p>
+				<a href="#" target="_blank">
+					<button class="cta-button">Explore</button>
+				</a>
+			</div>
+
+		</div>
 
 	</div>
 </section>

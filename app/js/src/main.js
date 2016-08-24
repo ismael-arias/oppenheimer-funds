@@ -27,33 +27,78 @@ console.log("From TestLib ->", testlib);
 // Add Slick Carousels
 // Library Source and Docs: http://kenwheeler.github.io/slick/
 $('.pp-slideshow').not('.slick-initialized').slick();
+$('.ff-slideshow').not('.slick-initialized').slick();
 //
-$(window).resize(function(e) {
-  console.log("resize");
-    facial_box_container();
-});
-facial_box_container();
 
-//
-function facial_box_container() {
-    $('.facial-box').not('.slick-initialized').slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: false,
-        responsive: [{
-            breakpoint: 539,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true,
-                dots: true
-            }
-        }]
-    });
+$('.facial-box').not('.slick-initialized').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false,
+    responsive: [{
+        breakpoint: 539,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+        }
+    },
+    {
+        breakpoint: 853,
+        settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            arrows: false,
+            dots: false
+        }
+    },
+    {
+        breakpoint: 1280,
+        settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            arrows: false,
+            dots: false
+        }
+    }
+  ]
+});
+
+function resizeWidthOnly(a,b) {
+  var c = [window.innerWidth];
+  return onresize = function() {
+    var d = window.innerWidth,
+        e = c.length;
+    c.push(d);
+    if(c[e]!==c[e-1]){
+      clearTimeout(b);
+      b = setTimeout(a, 250);
+    }
+  }, a;
 }
+/*fix slick slider snap back on resize*/
+resizeWidthOnly(function() {
+    var windowWidth = $(window).width();
+    if (windowWidth >= 980) {
+        $(".my-slider > .slick-list > .slick-track").css("transform", "translate3d(0px, 0px, 0px)");
+    }
+});
+
+var element = $(".facial-box");
+
+$(element).on('setPosition', function(event, slick, currentSlide, nextSlide) {
+  var slidesShown = $(element).slick('slickGetOption', 'slidesToShow');
+  var numberOfSlides = $(element).find('.slick-slide').length;
+
+  if (slidesShown === numberOfSlides) {
+    $(element).find('.slick-track').css('transform', 'translate3d(0px, 0px, 0px)');
+  }
+});
+
+
 // Add Tracking to slideshow change events
 $('.pp-slideshow').on('afterChange', function(event, slick, currentSlide) {
     var slideShowTitle = slick.$slider.attr("tracking");

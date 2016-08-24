@@ -20,47 +20,75 @@
 	.main {
 		@include size-class-container;
 
-		.post-header{
+		// header{
+		// 	@include size-class(all-desktop) {
+		// 		margin-top: 0px;
+		//     margin-bottom: 0px;
+		//     background-color: #252424;
+		//     background-position: center;
+		//     background-size: cover;
+		//     position: relative;
+		//     overflow: hidden;
+		// 		@include full-bleed;
+		// 		background-image: url("../images/header.svg");
+		// 		height: 0;
+		// 		padding: 32%;
+		// 	}
+		//
+		// }
+
+		header.post-header{
 			margin: 0;
 			@include full-bleed;
 			@include height-ratio(1128 / 1800);
 			@include size-class(all-desktop) {
-			position: relative;
-			overflow: hidden;
-			.header-container{
-					position: absolute;
-					z-index: 4;
-					margin: auto;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					height: 100%;
-					width: 100%;
-					display: flex;
-					-webkit-box-align: center;
-					box-align: center;
-					.background-image img{
-						position: absolute;
-						left: -50%;
-						right: -50%;
-						top: -50%;
-						bottom: -50%;
-						width: auto;
-						height: 100%;
-						margin: auto;
-						z-index: 0;
-						max-width: none;
-						@include size-class(compact) {
-							left: -90%;
-						}
-					}
-				}
+				position: relative;
+				overflow: hidden;
 			}
-			@include size-class(compact) {
-				min-height: 410px;
+			@include size-class(tablet-portrait) {
+				min-height: 450px;
 				height: 43vw;
 			}
+			@include size-class(compact) {
+				min-height: 450px;
+				height: 43vw;
+			}
+				.header-container{
+					@include size-class(all-desktop) {
+						position: absolute;
+						z-index: 4;
+						margin: auto;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 100%;
+						width: 100%;
+						display: flex;
+						-webkit-box-align: center;
+						box-align: center;
+						align-items: center;
+					}
+					.background-image img{
+						@include size-class(all-desktop) {
+							position: absolute;
+							left: -50%;
+							right: -50%;
+							top: -50%;
+							bottom: -50%;
+							width: auto;
+							height: 100%;
+							margin: auto;
+							z-index: 0;
+							max-width: none;
+							@include size-class(compact) {
+								left: -90%;
+							}
+						}
+
+					}
+				}
+
 		}
 
 	  // Begin Example Code
@@ -70,6 +98,7 @@
 			@include size-class(all-desktop) {
 				width: span(12);
 				padding: span(1) 0;
+				overflow: hidden;
 
 				p{
 					@include font-size(38, vw, 38) {
@@ -135,7 +164,7 @@
 			@include full-bleed;
 			border-bottom: 5px solid #79f2ec;
 			@include size-class(all-desktop) {
-
+				overflow: hidden;
 				@include font-size(36, vw, 36) {
 					line-height: em(36);
 				}
@@ -260,6 +289,7 @@
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
+				overflow: hidden;
 				@include font-size(36, vw, 36) {
 					line-height: em(36);
 				}
@@ -280,12 +310,15 @@
 					}
 					h1{
 						@include size-class(all-desktop) {
-							font-size: em(230);
+							font-size: em(200);
 							font-weight: 300;
 							color: #feffff;
 							opacity: 0.1;
 							text-align: center;
 							line-height: 1em;
+						}
+						@include size-class(tablet-portrait) {
+							font-size: em(140);
 						}
 					}
 				}
@@ -318,6 +351,7 @@
 							width: span(8);
 							margin: 0 auto;
 							padding: span(0.3) 0;
+							line-height: 1em;
 							text-align: center;
 						}
 						@include size-class(tablet-portrait) {
@@ -325,6 +359,7 @@
 						}
 						@include size-class(compact) {
 							width: span(4);
+							padding-top: 18px;
 						}
 						p{
 							@include size-class(all-desktop) {
@@ -427,6 +462,9 @@
 									line-height: 1.1;
 
 								}
+							}
+							@include size-class(compact) {
+								width: span(4);
 							}
 						}
 					}
@@ -583,6 +621,7 @@
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
+				overflow: hidden;
 				@include font-size(36, vw, 36) {
 					line-height: em(36);
 				}
@@ -615,7 +654,8 @@
 							line-height: 1em;
 						}
 						@include size-class(tablet-portrait) {
-							font-size: em(150);
+							width: span(8);
+							font-size: em(120);
 						}
 					}
 				}
@@ -738,6 +778,9 @@
 							display: flex;
 							margin-bottom: 30px;
 							overflow: hidden;
+						}
+						@include size-class(tablet-portrait) {
+							width: span(8);
 						}
 						@include size-class(compact) {
 							width: span(4);
@@ -905,6 +948,7 @@
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
+				overflow: hidden;
 				@include font-size(36, vw, 36) {
 					line-height: em(36);
 				}
@@ -919,9 +963,6 @@
 						left: 0;
 						text-align: center;
 						z-index: 1;
-					}
-					@include size-class(regular) {
-
 					}
 					@include size-class(compact) {
 						display: none;
@@ -938,6 +979,9 @@
 						}
 						@include size-class(regular) {
 							font-size: em(230);
+						}
+						@include size-class(tablet-portrait) {
+							font-size: em(195);
 						}
 					}
 				}
@@ -1226,6 +1270,7 @@
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
+				overflow: hidden;
 				@include font-size(36, vw, 36) {
 					line-height: em(36);
 				}
@@ -1241,8 +1286,8 @@
 						text-align: center;
 						z-index: 1;
 					}
-					@include size-class(regular) {
-
+					@include size-class(tablet-portrait) {
+						top: 2vw;
 					}
 					@include size-class(compact) {
 						display: none;
@@ -1259,6 +1304,7 @@
 						}
 						@include size-class(regular) {
 							font-size: em(230);
+							line-height: 1.4em;
 						}
 					}
 				}
@@ -1303,6 +1349,9 @@
 							@include size-class(tablet-portrait) {
 								@include font-size(60, vw);
 							}
+							@include size-class(compact) {
+								@include font-size(52, vw);
+							}
 						}
 					}
 				}
@@ -1328,6 +1377,7 @@
 							padding-bottom: 20px;
 						}
 					}
+
 					.slide{
 						@include size-class(all-desktop) {
 							width: span(8);
@@ -1339,10 +1389,41 @@
 						@include size-class(compact) {
 							width: span(4);
 						}
+						img{
+							width: 100%;
+						}
+
+						.slide-caption{
+							@include size-class(all-desktop) {
+								width: span(7);
+								margin: 0 auto;
+								margin-bottom: 28px;
+								position: relative;
+							}
+							@include size-class(compact) {
+								width: span(3);
+							}
+							p{
+								@include size-class(all-desktop) {
+									position: absolute;
+									left: 0;
+									bottom: 60px;
+									margin: auto;
+									@include font-size(28, vw, 28) {
+										text-align: center;
+									}
+								}
+								@include size-class(compact) {
+									bottom: 30px;
+								}
+							}
+						}
+
+
 						.slick-prev{
 							cursor: pointer;
 							top: 40%;
-							left: 10%;
+							left: 5%;
 							width: 48px;
 							height: 79px;
 							background: url('../images/arrow-left.png') no-repeat;
@@ -1361,23 +1442,28 @@
 							-ms-transform: translateY(0);
 							-o-transform: translateY(0);
 							transform: translateY(0);
-
+							@include size-class(tablet-portrait) {
+							  margin: 17px;
+								top: 20%;
+								left: 0;
+							  width: 24px;
+							  height: 39px;
+							  background-size: 24px 39px;
+							}
 							@include size-class(compact) {
-								@include size-class(compact) {
-								  margin: 17px;
-								  top: 39%;
-								  left: 16px;
-								  width: 24px;
-								  height: 39px;
-								  background-size: 24px 39px;
-								}
+							  margin: 17px;
+								top: 32%;
+								left: 0;
+							  width: 24px;
+							  height: 39px;
+							  background-size: 24px 39px;
 							}
 						}
 						.slick-next{
 							cursor: pointer;
 							top: 40%;
 							left: auto;
-							right:10%;
+							right:5%;
 							width: 48px;
 							height: 79px;
 							background: url('../images/arrow-right.png') no-repeat;
@@ -1396,10 +1482,18 @@
 							-ms-transform: translateY(0);
 							-o-transform: translateY(0);
 							transform: translateY(0);
+							@include size-class(tablet-portrait) {
+							  margin: 17px;
+								top: 20%;
+								right: 0;
+							  width: 24px;
+							  height: 39px;
+								background-size: 24px 39px;
+							}
 							@include size-class(compact) {
 							  margin: 17px;
-							  top: 39%;
-							  right: 16px;
+								top: 32%;
+								right: 0;
 							  width: 24px;
 							  height: 39px;
 								background-size: 24px 39px;
@@ -1435,11 +1529,15 @@
 								margin: auto;
 							}
 						}
+
+
 					}
+
 					.bottom-section{
 						@include size-class(all-desktop) {
 							width: span(6.2);
 							margin: 0 auto;
+							overflow: hidden;
 						}
 						@include size-class(tablet-portrait) {
 							width: span(8);
@@ -1456,10 +1554,11 @@
 
 		.section7{
 			@include full-bleed;
-			background: url("../images/footer.png");
+			background: url("../images/footer.svg");
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
+				overflow: hidden;
 			}
 			@include size-class(compact) {
 				padding: span(.6);
@@ -1481,7 +1580,7 @@
 					@include size-class(tablet-portrait) {
 						width: span(3);
 						right: 11%;
-						bottom: 14%;
+						bottom: 16%;
 					}
 					@include size-class(compact) {
 						width: span(3);
@@ -1557,43 +1656,6 @@
 			}
 		}
 
-
-
-
-		// Additional styles for slick carousel dots.
-
-
-		// .slick-dots{
-		// 	margin-top: 0;
-		// 	li{
-		// 		width: 10px;
-		// 		height: 10px;
-		// 		border: 1px #000000 solid;
-		// 		border-radius: 100%;
-		// 		margin-right: 10px;
-		// 		@include transition(all 0.5s ease);
-		//
-		// 		&.slick-active{
-		// 			background-color: #000000;
-		// 		}
-		//
-		// 		&:last-child{
-		// 			margin: 0;
-		// 		}
-		//
-		// 		button:before{
-		// 			display: none;
-		// 		}
-		// 	}
-		// 	@include size-class(compact) {
-		// 	 	position: absolute;
-		// 		bottom: 0;
-		// 		left: 0;
-		// 		right: 0;
-		// 		margin: auto;
-		// 	}
-		// }
-	    // End Example Code
 
 	    // Un-comment to enable Size Class Grid Debug
 		@include size-class-debug(overlay);

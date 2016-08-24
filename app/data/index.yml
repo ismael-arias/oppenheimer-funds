@@ -308,22 +308,32 @@ section6:
 
   slideshow:
       images:
-        - image: "https://placehold.it/1024x768"
+        - image: "images/Slide1.svg"
+          paragraphs: |
+            "Analyzing an athlete’s heart rate can show when they detect
+            and react to approaching objects, such as when a defensive
+            line is coming at an offensive player, or when a hurdle is
+            approaching a runner."
 
-        - image: "https://placehold.it/1024x768"
+        - image: "images/Slide2.svg"
+          paragraphs: |
+            "Analyzing an athlete’s heart rate can show when they detect
+            and react to approaching objects, such as when a defensive
+            line is coming at an offensive player, or when a hurdle is
+            approaching a runner."
 
-        - image: "https://placehold.it/1024x768"
+        - image: "images/Slide3.svg"
+          paragraphs: |
+            "Analyzing an athlete’s heart rate can show when they detect
+            and react to approaching objects, such as when a defensive
+            line is coming at an offensive player, or when a hurdle is
+            approaching a runner."
 
-
-      captions:
-        caption1: "Image 1 caption"
-        caption: "Image 2 caption"
-        caption: "Image 3 caption"
 
 section7:
   copy:
     paragraphs: |
       See how biometrics can lead to a
       smarter investing future with OppenheimerFunds,
-       The Right Way to Invest.
-    image: "../images/logo-footer.png"
+      The Right Way to Invest.
+    image: "images/logo-footer.png"

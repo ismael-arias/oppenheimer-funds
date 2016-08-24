@@ -98,7 +98,6 @@
 			@include size-class(all-desktop) {
 				width: span(12);
 				padding: span(1) 0;
-				overflow: hidden;
 
 				p{
 					@include font-size(38, vw, 38) {
@@ -334,8 +333,9 @@
 							margin: 0 auto;
 						}
 						@include size-class(compact) {
-							width: span(1);
+							width: span(1.5);
 						}
+
 					}
 					svg{
 						@include size-class(all-desktop) {
@@ -359,7 +359,8 @@
 						}
 						@include size-class(compact) {
 							width: span(4);
-							padding-top: 18px;
+							padding: span(0.2) 0;
+							padding-top: 22px;
 						}
 						p{
 							@include size-class(all-desktop) {
@@ -372,6 +373,9 @@
 							}
 							@include size-class(tablet-portrait) {
 								@include font-size(60, vw);
+							}
+							@media all and (max-width: $mobile) {
+								font-size: em(46);
 							}
 						}
 					}
@@ -616,7 +620,7 @@
 
 		.section4{
 			@include full-bleed;
-			background-color: #000000;
+			background-color: #262626;
 			border-bottom: 5px solid #4da0ff;
 			position: relative;
 			@include size-class(all-desktop) {
@@ -671,8 +675,9 @@
 							margin: 0 auto;
 						}
 						@include size-class(compact) {
-							width: span(1);
+							width: span(2);
 						}
+
 					}
 					.subtitle{
 						@include size-class(all-desktop) {
@@ -686,10 +691,11 @@
 						}
 						@include size-class(compact) {
 							width: span(4);
+							padding-top: 20px;
 						}
 						p{
 							@include size-class(all-desktop) {
-								@include font-size(70, vw) {
+								@include font-size(64, vw, 64) {
 									font-weight: 600;
 									line-height: em(36);
 									color: #36C1F9;
@@ -698,6 +704,9 @@
 							}
 							@include size-class(tablet-portrait) {
 								@include font-size(60, vw);
+							}
+							@media all and (max-width: $mobile) {
+								font-size: em(44);
 							}
 						}
 					}
@@ -997,7 +1006,8 @@
 							margin: 0 auto;
 						}
 						@include size-class(compact) {
-							width: span(1);
+							width: span(1.5);
+							padding-bottom: 10px;
 						}
 					}
 					.subtitle{
@@ -1012,6 +1022,7 @@
 						}
 						@include size-class(compact) {
 							width: span(4);
+							padding-top: 20px;
 						}
 						p{
 							@include size-class(all-desktop) {
@@ -1148,7 +1159,6 @@
 									@include font-size(32, vw, 32) {
 										text-align: left;
 										line-height: 1.1;
-
 									}
 								}
 							}
@@ -1254,6 +1264,9 @@
 
 									}
 								}
+									@include size-class(compact) {
+										width: span(4);
+									}
 							}
 						}
 					}
@@ -1266,7 +1279,7 @@
 
 		.section6{
 			@include full-bleed;
-			background-color: #000000;
+			background-color: #262626;
 			position: relative;
 			@include size-class(all-desktop) {
 				padding-top: span(1);
@@ -1316,11 +1329,11 @@
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
-							width: span(1.5);
+							width: span(2);
 							margin: 0 auto;
 						}
 						@include size-class(compact) {
-							width: span(1);
+							width: span(2);
 						}
 					}
 					.subtitle{
@@ -1336,13 +1349,14 @@
 						}
 						@include size-class(compact) {
 							width: span(4);
+							padding: 0;
 						}
 						p{
 							@include size-class(all-desktop) {
-								@include font-size(70, vw) {
+								@include font-size(70, vw, 70) {
 									font-weight: 600;
 									line-height: em(36);
-									color: #4da0ff;
+									color: #8c80ff;
 									letter-spacing: 2px;
 								}
 							}
@@ -1350,17 +1364,26 @@
 								@include font-size(60, vw);
 							}
 							@include size-class(compact) {
-								@include font-size(52, vw);
+								@include font-size(60, vw, 60) {
+									line-height: em(60);
+								}
 							}
 						}
 					}
 				}
 
 				.middle-section{
+					margin: 0;
 					@include size-class(all-desktop) {
 						width: span(12);
 						margin: 0 auto;
 						padding-top: 20px;
+					}
+					@include size-class(compact) {
+						width: span(4);
+						padding: span(1) 0;
+						min-height: 250px;
+						margin-bottom: span(1);
 					}
 					.middle-info{
 						@include size-class(all-desktop) {
@@ -1378,7 +1401,7 @@
 						}
 					}
 
-					.slide{
+					.slide-container{
 						@include size-class(all-desktop) {
 							width: span(8);
 							margin: 0 auto;
@@ -1387,10 +1410,47 @@
 							width: span(8);
 						}
 						@include size-class(compact) {
+							@include full-bleed;
 							width: span(4);
+							background-color: #8b80ff;
+							margin-bottom: 60px;
+						}
+						li{
+							background-color: #8b80ff;
 						}
 						img{
 							width: 100%;
+						}
+						.slick-list{
+							@include size-class(compact) {
+								overflow: visible;
+							}
+						}
+						.slick-track{
+							@include size-class(all-desktop) {
+								height: 550px !important;
+								overflow-x: hidden;
+								overflow-y: visible;
+							}
+							@include size-class(regular) {
+								height: 550px !important;
+							}
+
+							@include size-class(tablet-portrait) {
+								height: 400px !important;
+							}
+
+							@include size-class(tablet-landscape) {
+								height: 396px !important;
+							}
+
+							@include size-class(compact) {
+								height: 380px !important;
+								overflow-x: hidden;
+							}
+							@media all and (max-width: $mobile) {
+								height: 260px !important;
+							}
 						}
 
 						.slide-caption{
@@ -1401,24 +1461,33 @@
 								position: relative;
 							}
 							@include size-class(compact) {
-								width: span(3);
+								width: span(3.3);
 							}
 							p{
 								@include size-class(all-desktop) {
 									position: absolute;
 									left: 0;
-									bottom: 60px;
+									bottom: -24px;
 									margin: auto;
 									@include font-size(28, vw, 28) {
 										text-align: center;
 									}
 								}
+								@include size-class(regular) {
+									position: absolute;
+									bottom: -61px;
+								}
 								@include size-class(compact) {
-									bottom: 30px;
+									position: inherit;
+									bottom: -20px;
+									left: 0;
+									margin: auto;
+									@include font-size(26, vw, 26) {
+				            line-height: em(26);
+					        }
 								}
 							}
 						}
-
 
 						.slick-prev{
 							cursor: pointer;
@@ -1450,10 +1519,13 @@
 							  height: 39px;
 							  background-size: 24px 39px;
 							}
+							@include size-class(tablet-portrait) {
+								top: 30%;
+							}
 							@include size-class(compact) {
 							  margin: 17px;
-								top: 32%;
-								left: 0;
+								top: 25%;
+								left: -15px;
 							  width: 24px;
 							  height: 39px;
 							  background-size: 24px 39px;
@@ -1484,7 +1556,7 @@
 							transform: translateY(0);
 							@include size-class(tablet-portrait) {
 							  margin: 17px;
-								top: 20%;
+								top: 30%;
 								right: 0;
 							  width: 24px;
 							  height: 39px;
@@ -1492,8 +1564,8 @@
 							}
 							@include size-class(compact) {
 							  margin: 17px;
-								top: 32%;
-								right: 0;
+								top: 25%;
+								right: -15px;
 							  width: 24px;
 							  height: 39px;
 								background-size: 24px 39px;
@@ -1521,15 +1593,17 @@
 									display: none;
 								}
 							}
+							@include size-class(all-desktop) {
+								margin-top: 25px;
+							}
 							@include size-class(compact) {
 								position: absolute;
-								bottom: 0;
+								bottom: -31px;
 								left: 0;
 								right: 0;
 								margin: auto;
 							}
 						}
-
 
 					}
 
@@ -1611,6 +1685,7 @@
 						padding: span(1.2) 0;
 						padding-top: 0;
 					}
+
 					p{
 						@include size-class(all-desktop) {
 							@include font-size(64, vw, 64) {
@@ -1625,6 +1700,9 @@
 						}
 						@include size-class(regular) {
 							@include font-size(60, vw, 60);
+						}
+						@media all and (max-width: $mobile) {
+							font-size: em(40);
 						}
 
 					}

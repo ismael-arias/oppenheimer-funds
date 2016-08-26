@@ -15,7 +15,7 @@
 #shell #story {
 	display: inherit;
 	-webkit-font-smoothing: antialiased;
-	background: #000000;
+	background: #262626;
 
 	.main {
 		@include size-class-container;
@@ -81,6 +81,7 @@
 			@include size-class(all-desktop) {
 				width: span(12);
 				padding: span(1) 0;
+				padding-bottom: 50px;
 
 				p{
 					@include font-size(38, vw, 38) {
@@ -109,7 +110,7 @@
 				}
 				p{
 					@include size-class(all-desktop) {
-						@include font-size(42, vw, 42);
+						@include font-size(44, vw, 44);
 					}
 					.dropcap{
 						position: relative;
@@ -145,10 +146,13 @@
 		.section2{
 			@include full-bleed;
 			border-bottom: 5px solid #79f2ec;
+			background-color: #262626;
 			@include size-class(all-desktop) {
 				overflow: hidden;
-				@include font-size(36, vw, 36) {
-					line-height: em(36);
+				p{
+					@include font-size(34, vw, 34) {
+						line-height: em(46);
+					}
 				}
 			}
 			.evolution-box{
@@ -211,7 +215,7 @@
 								}
 								@include size-class(all-desktop) {
 								  width: 80%;
-								  height: 100%;
+								  height: 20vw;
 									padding: 5px;
 								}
 								@include size-class(tablet-portrait) {
@@ -223,6 +227,9 @@
 									height: 200px;
 									padding: 5px;
 								}
+								@include size-class(compact) {
+									height: 80vw;
+								}
 
 							}
 
@@ -230,11 +237,14 @@
 
 						figcaption{
 							@include size-class(all-desktop) {
-								width: span(6);
+								width: span(8);
 								margin: 0 auto;
 								color: #ffffff;
 								text-align: center;
-								@include font-size(20);
+								@include font-size(29, vw, 29) {
+									line-height: em(38);
+								}
+
 							}
 							@include size-class(tablet-portrait) {
 								width: span(6);
@@ -249,102 +259,6 @@
 						}
 					}
 				}
-
-			// .evolution-box{
-			//     @include size-class(all-desktop) {
-			// 			width: span(8);
-			// 			margin: 0 auto;
-			//       height: auto;
-			//       display: -webkit-box;
-			//       display: -moz-box;
-			//       display: box;
-			//       display: -webkit-flex;
-			//       display: -moz-flex;
-			//       display: -ms-flexbox;
-			//       display: flex;
-			//       margin-bottom: 30px;
-			//       -webkit-flex-direction: row;
-			//       flex-direction: row;
-			// 			-webkit-justify-content: flex-start; /* Safari */
-			// 			justify-content:flex-start;
-			// 			-webkit-flex-wrap: nowrap; /* Safari */
-  		// 			flex-wrap: nowrap;
-			//     }
-			//
-			//
-			//     @include size-class(compact) {
-			//       width: span(4);
-			//       position: relative;
-			//       -webkit-flex-direction: column;
-			//       flex-direction: column;
-			//     }
-			//     .img-box{
-			//       @include size-class(all-desktop) {
-			//         -webkit-box-flex: 0;
-			//         -moz-box-flex: 0;
-			//         box-flex: 0;
-			//
-			//         align-items: center;
-			// 				-webkit-justify-content: center; /* Safari */
-  		// 				justify-content: center;
-			// 				padding: 10px;
-			//
-			//       }
-			//       @include size-class(compact) {
-			//         -ms-flex-align: center;
-			//         -moz-flex-align: center;
-			//         -webkit-align-items: center;
-			//         -moz-align-items: center;
-			//         -webkit-box-align: center;
-			//         -moz-box-align: center;
-			//
-			//         align-items: center;
-			//       }
-			//       .svg-container{
-			//         @include size-class(all-desktop) {
-			// 					display: -webkit-box;
-			// 		      display: -moz-box;
-			// 		      display: box;
-			// 		      display: -webkit-flex;
-			// 		      display: -moz-flex;
-			// 		      display: -ms-flexbox;
-			// 		      display: flex;
-			//         }
-			//         svg{
-			//           @include size-class(all-desktop) {
-			//             height: 100%;
-			//             width: 100%;
-			//             min-height: 200px;
-			//             min-width: 200px;
-			// 						max-height: 300px;
-			//             max-width: 300px;
-			//             padding: 10px;
-			//           }
-			//
-			//         }
-			//
-			//       }
-			//       figcaption{
-			//         @include size-class(all-desktop) {
-			//           width: span(6);
-			//           margin: 0 auto;
-			//           color: #ffffff;
-			//           text-align: center;
-			//           @include font-size(20);
-			//         }
-			//         @include size-class(tablet-portrait) {
-			//           width: span(6);
-			//           @include font-size(30);
-			//           line-height: em(36);
-			//         }
-			//         @include size-class(compact) {
-			//           width: span(4);
-			//           @include font-size(35);
-			//           line-height: em(36);
-			//         }
-			//       }
-			//     }
-			//   }
 
 			.text-container2{
 				@include size-class(all-desktop) {
@@ -379,48 +293,25 @@
 			@include size-class(all-desktop) {
 				padding-top: span(1);
 				overflow: hidden;
-				@include font-size(36, vw, 36) {
-					line-height: em(36);
+				p{
+					@include font-size(34, vw, 34) {
+						line-height: em(46);
+					}
 				}
 			}
 			.section-container{
-				.section-title{
-					@include size-class(all-desktop) {
-						width: span(12);
-						margin: 0 auto;
-						position: absolute;
-						top: 9vw;
-						left: 0;
-						text-align: center;
-						z-index: 1;
-					}
-					@include size-class(compact) {
-						display: none;
-					}
-					h1{
-						@include size-class(all-desktop) {
-							font-size: em(200);
-							font-weight: 300;
-							color: #feffff;
-							opacity: 0.1;
-							text-align: center;
-							line-height: 1em;
-						}
-						@include size-class(tablet-portrait) {
-							font-size: em(140);
-						}
-					}
-				}
 
 				.section-top{
 					@include size-class(all-desktop) {
-						z-index: 2;
 						width: span(12);
+						position: relative;
+						z-index: 3;
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
 							width: span(1);
 							margin: 0 auto;
+
 						}
 						@include size-class(compact) {
 							width: span(1.5);
@@ -430,8 +321,12 @@
 					svg{
 						@include size-class(all-desktop) {
 							width: 100%;
-							height: 100%;
+							height: 12vw;
 							padding-top: 20px;
+
+						}
+						@include size-class(compact) {
+							height: 20vw;
 						}
 
 					}
@@ -467,6 +362,35 @@
 							@media all and (max-width: $mobile) {
 								font-size: em(46);
 							}
+						}
+					}
+				}
+
+				.section-title{
+					@include size-class(all-desktop) {
+						width: span(12);
+						margin: 0 auto;
+						position: absolute;
+						top: 9vw;
+						left: 0;
+						text-align: center;
+						z-index: 1;
+					}
+					@include size-class(compact) {
+						display: none;
+					}
+					h1{
+						@include size-class(all-desktop) {
+							font-size: em(300);
+							font-weight: 300;
+							color: #333333;
+							text-align: center;
+						}
+						@include size-class(tablet-landscape) {
+							font-size: em(200);
+						}
+						@include size-class(tablet-portrait) {
+							font-size: em(160);
 						}
 					}
 				}
@@ -716,8 +640,10 @@
 			@include size-class(all-desktop) {
 				padding-top: span(1);
 				overflow: hidden;
-				@include font-size(36, vw, 36) {
-					line-height: em(36);
+				p{
+					@include font-size(34, vw, 34) {
+						line-height: em(46);
+					}
 				}
 			}
 			.section-container{
@@ -739,17 +665,16 @@
 					}
 					h1{
 						@include size-class(all-desktop) {
-							width: span(10);
-							margin: auto;
-							font-size: em(230);
+							font-size: em(260);
 							font-weight: 300;
-							color: #feffff;
-							opacity: 0.1;
-							line-height: 1em;
+							color: #333333;
+							text-align: center;
+						}
+						@include size-class(tablet-landscape) {
+							font-size: em(200);
 						}
 						@include size-class(tablet-portrait) {
-							width: span(8);
-							font-size: em(120);
+							font-size: em(160);
 						}
 					}
 				}
@@ -758,6 +683,7 @@
 					@include size-class(all-desktop) {
 						z-index: 2;
 						width: span(12);
+						position: relative;
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
@@ -807,19 +733,18 @@
 						@include size-class(all-desktop) {
 							width: span(6);
 							padding: 0;
+							position: relative;
+							p{
+								@include font-size(34, vw, 34) {
+									line-height: em(46);
+								}
+							}
 						}
 						@include size-class(tablet-portrait) {
 							width: span(8);
 						}
 						@include size-class(compact) {
 							width: span(4);
-						}
-						p{
-							@include size-class(all-desktop) {
-								@include font-size(37, vw, 37);
-								line-height: 1.2;
-							}
-
 						}
 					}
 				}
@@ -1002,7 +927,7 @@
 					// }
 					.facial-box{
 						@include size-class(all-desktop) {
-							width: span(10);
+							width: span(6);
 							margin: 0 auto;
 
 						}
@@ -1016,7 +941,7 @@
 						}
 						.img-box{
 							@include size-class(all-desktop) {
-								width: span(2.7);
+								width: span(1);
 						    padding: 0% 1%;
 
 							}
@@ -1181,8 +1106,10 @@
 			@include size-class(all-desktop) {
 				padding-top: span(1);
 				overflow: hidden;
-				@include font-size(36, vw, 36) {
-					line-height: em(36);
+				p{
+					@include font-size(34, vw, 34) {
+						line-height: em(46);
+					}
 				}
 			}
 			.section-container{
@@ -1203,17 +1130,16 @@
 						@include size-class(all-desktop) {
 							width: span(12);
 							margin: auto;
-							font-size: em(300);
+							font-size: em(360);
 							font-weight: 300;
-							color: #feffff;
-							opacity: 0.1;
+							color: #333333;
 							line-height: 1em;
 						}
-						@include size-class(regular) {
-							font-size: em(230);
+						@include size-class(tablet-portrait) {
+							font-size: em(260);
 						}
 						@include size-class(tablet-portrait) {
-							font-size: em(195);
+							font-size: em(200);
 						}
 					}
 				}
@@ -1222,6 +1148,7 @@
 					@include size-class(all-desktop) {
 						z-index: 2;
 						width: span(12);
+						position: relative;
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
@@ -1267,6 +1194,7 @@
 					@include size-class(all-desktop) {
 						width: span(12);
 						z-index: 2;
+						position: relative;
 					}
 					@include size-class(compact) {
 						width: span(4);
@@ -1507,8 +1435,10 @@
 			@include size-class(all-desktop) {
 				padding-top: span(1);
 				overflow: hidden;
-				@include font-size(36, vw, 36) {
-					line-height: em(36);
+				p{
+					@include font-size(34, vw, 34) {
+						line-height: em(46);
+					}
 				}
 			}
 			.section-container{
@@ -1517,7 +1447,7 @@
 						width: span(12);
 						margin: 0 auto;
 						position: absolute;
-						top: 10vw;
+						top: 15vw;
 						left: 0;
 						text-align: center;
 						z-index: 1;
@@ -1534,11 +1464,10 @@
 							margin: auto;
 							font-size: em(300);
 							font-weight: 300;
-							color: #feffff;
-							opacity: 0.1;
+							color: #333333;
 							line-height: 1em;
 						}
-						@include size-class(regular) {
+						@include size-class(tablet-landscape) {
 							font-size: em(230);
 							line-height: 1.4em;
 						}
@@ -1549,6 +1478,7 @@
 					@include size-class(all-desktop) {
 						z-index: 2;
 						width: span(12);
+						position: relative;
 					}
 					.svg-container{
 						@include size-class(all-desktop) {
@@ -1601,6 +1531,7 @@
 						width: span(12);
 						margin: 0 auto;
 						padding-top: 20px;
+						position: relative;
 					}
 					@include size-class(compact) {
 						width: span(4);
@@ -1610,7 +1541,7 @@
 					}
 					.middle-info{
 						@include size-class(all-desktop) {
-							width: span(6);
+							width: span(6.2);
 							margin: 0 auto;
 							padding-bottom: 20px;
 						}
@@ -1824,6 +1755,7 @@
 							width: span(6.2);
 							margin: 0 auto;
 							overflow: hidden;
+
 						}
 						@include size-class(tablet-portrait) {
 							width: span(8);

@@ -31,6 +31,7 @@ $('.ff-slideshow').not('.slick-initialized').slick();
 //
 
 $('.facial-box').not('.slick-initialized').slick({
+    // variableWidth: true,
     dots: false,
     infinite: true,
     speed: 300,
@@ -543,14 +544,23 @@ $("#face4_wrapper").mouseleave(function() {
 // Eye Animations
 var eyeAnimation = new TimelineLite();
 
-eyeAnimation.to('#Eye_x5F_1', 1.1, {
-    WebkitClipPath: "inset(0% 0% 0% 99%)",
-    ease: Power0.easeNone
-});
-eyeAnimation.to('#Scanner_x5F_line', 1.04, {
-    transform: "translate3d(124px,0,0)",
-    ease: Power0.easeNone
-}, '-=1.06');
+//Scanner_eye
+TweenMax.set($('#Scanner_eye'), {transform: 'translate(-280px,0)'});
+
+    var eyeDistance = 450;
+
+    eyeAnimation.to('#toBeMasked', 1.1, {x:eyeDistance, ease: Power0.easeNone});
+    eyeAnimation.to('#Eye2', 1.1, {x:-eyeDistance, ease: Power0.easeNone}, '-=1.1');
+    eyeAnimation.to('#Scanner_eye', 1.08, {x:292, ease: Power0.easeNone}, '-=1.07');
+
+// eyeAnimation.to('#Eye_x5F_1', 1.1, {
+//     WebkitClipPath: "inset(0% 0% 0% 99%)",
+//     ease: Power0.easeNone
+// });
+// eyeAnimation.to('#Scanner_x5F_line', 1.04, {
+//     transform: "translate3d(124px,0,0)",
+//     ease: Power0.easeNone
+// }, '-=1.06');
 
 //    var scene_eye = new ScrollMagic.Scene({
 //        triggerElement: "#eyeMask", triggerHook: 'onEnter', offset: 340})
@@ -584,15 +594,15 @@ hunterAnimation.to($(hunterSignals[0]), 0.3, {
         opacity: 1
     })
     .to($('#Arm_x5F_2'), 0.3, {
-        transform: "rotate(10deg) translateY(-2px)",
+        transform: "rotate(10deg) translate(9px, -5px)",
         ease: Power0.easeNone
     });
 hunterAnimation.to($('#hand_hunter'), 0.3, {
-    transform: "translate3d(9px,0,0)",
+    transform: "translate3d(11px,0,0)",
     ease: Power0.easeNone
 }, '-=0.3');
 hunterAnimation.to($('#arrow_hunter'), 0.3, {
-    transform: "translate3d(9px,0,0)",
+    transform: "translate3d(11px,0,0)",
     ease: Power0.easeNone
 }, '-=0.3');
 
@@ -738,31 +748,31 @@ var scene_touchId = new ScrollMagic.Scene({
 var touchSenAnimation = new TimelineLite();
 
 touchSenAnimation.to($('#hand_elem_1'), 0.20, {
-        transform: 'scale(0.95)',
-        ease: Back.easeOut.config(2)
+        scale:0.95, transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#hand_elem_1'), 0.40, {
-        transform: 'scale(1.05)',
-        ease: Back.easeOut.config(2)
+        scale:1.05, transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#hand_elem_1'), 0.20, {
-        transform: 'scale(0.95)',
+        scale:0.95, transformOrigin:"50% 50%",
         ease: Power0.easeNone
     })
     .to($('#hand_elem_1'), 0.30, {
-        transform: 'scale(1)',
+        scale:1, transformOrigin:"50% 50%",
         ease: Power0.easeNone
     });
 touchSenAnimation.to($('#hand_elem_2'), 0.40, {
-    transform: 'scale(1.1)',
-    ease: Back.easeOut.config(1)
+    scale:1.1, transformOrigin:"50% 50%",
+    ease: Power0.easeNone
 }, '-=0.9');
 touchSenAnimation.to($('#hand_elem_2'), 0.20, {
-    transform: 'scale(0.90)',
+    scale:0.90, transformOrigin:"50% 50%",
     ease: Power0.easeNone
 }, '-=0.4');
 touchSenAnimation.to($('#hand_elem_2'), 0.10, {
-    transform: 'scale(1)',
+    scale:1, transformOrigin:"50% 50%",
     ease: Power0.easeNone
 }, '-=0.2');
 
@@ -782,36 +792,36 @@ TweenMax.set($('#heart_elem_1, #heart_elem_2'), {
 });
 
 heartAnimation.to($('#heart_elem_1'), 0.18, {
-        transform: 'scale(1.10)',
-        ease: Back.easeOut.config(2)
+        scale:1.10,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_1'), 0.18, {
-        transform: 'scale(0.95)',
-        ease: Back.easeOut.config(2)
+        scale:0.95,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_1'), 0.18, {
-        transform: 'scale(1.10)',
-        ease: Back.easeOut.config(2)
+        scale:1.10,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_1'), 0.18, {
-        transform: 'scale(1)',
-        ease: Back.easeOut.config(2)
+        scale:1,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_2'), 0.18, {
-        transform: 'scale(1.10)',
-        ease: Back.easeOut.config(2)
+        scale:1.10,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_2'), 0.18, {
-        transform: 'scale(0.95)',
-        ease: Back.easeOut.config(2)
+        scale:0.95,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_2'), 0.18, {
-        transform: 'scale(1.10)',
-        ease: Back.easeOut.config(2)
+        scale:1.10,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     })
     .to($('#heart_elem_2'), 0.18, {
-        transform: 'scale(1)',
-        ease: Back.easeOut.config(2)
+        scale:1,transformOrigin:"50% 50%",
+        ease: Power0.easeNone
     });
 
 var scene_heart = new ScrollMagic.Scene({

@@ -32,7 +32,7 @@ $('.ff-slideshow').not('.slick-initialized').slick();
 
 $('.facial-box').not('.slick-initialized').slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -179,6 +179,19 @@ var tl = new TimelineLite();
 // Controller
 var controller = new ScrollMagic.Controller();
 
+
+// Set current width
+var currentWidth = window.innerWidth || document.documentElement.clientWidth;
+
+var bottomOff = null;
+// for small phone: like iphone 5 etc...
+if (currentWidth <= 324) {
+    bottomOff = 140;
+} else if (currentWidth >= 325) {
+    bottomOff = 203;
+}
+
+
 // set somes animations for contents
 TweenMax.set($('.text-container1, .text-container2, .text11'), {opacity: 0, transform:'translate3d(0,50px,0)'});
 TweenMax.set($('.text3, .text5'), {opacity: 0, transform:'translate3d(-50px,0px,0)'});
@@ -188,6 +201,8 @@ TweenMax.set($('.text6, .text7'), {opacity: 0, transform:'translate3d(0px,0px,0)
 TweenMax.set($('.text8, .text9, .text12'), {opacity: 0, transform:'translate3d(0px,50px,0)'});
 TweenMax.set($('.text10'), {opacity: 0, transform:'translate3d(0px,-50px,0)'});
 
+TweenMax.set($('#man_explorer_move'), {y:70});
+
 // parallax effect for the titles
 TweenMax.set($('.touch_parallax, .facial_parallax, .iris_parallax, .heart_parallax'), {transform:'translate3d(0px,-80px,0)'});
 
@@ -196,7 +211,7 @@ var text1Ani = new TimelineLite();
 
   var scene_text1 = new ScrollMagic.Scene({
         triggerElement: ".text-container1",
-        triggerHook: 'onEnter', offset: 203
+        triggerHook: 'onEnter', offset: bottomOff
     })
     .setTween(text1Ani)
     .addTo(controller);
@@ -206,7 +221,7 @@ var text2Ani = new TimelineLite();
 
   var scene_text2 = new ScrollMagic.Scene({
         triggerElement: ".text-container2",
-        triggerHook: 'onEnter', offset: 203
+        triggerHook: 'onEnter', offset: bottomOff
     })
     .setTween(text2Ani)
     .addTo(controller);
@@ -216,7 +231,7 @@ var text3Ani = new TimelineLite();
 
   var scene_text3 = new ScrollMagic.Scene({
           triggerElement: ".text3",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text3Ani)
       .addTo(controller);
@@ -226,7 +241,7 @@ var text4Ani = new TimelineLite();
 
   var scene_text4 = new ScrollMagic.Scene({
           triggerElement: ".text4",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text4Ani)
       .addTo(controller);
@@ -236,7 +251,7 @@ var touchAniFade = new TimelineLite();
 
     var scene_touchFade = new ScrollMagic.Scene({
           triggerElement: "#touchIcon",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(touchAniFade)
       .addTo(controller);
@@ -247,7 +262,7 @@ var text5Ani = new TimelineLite();
 
   var scene_text5 = new ScrollMagic.Scene({
           triggerElement: ".text5",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text5Ani)
       .addTo(controller);
@@ -258,7 +273,7 @@ var text6Ani = new TimelineLite();
 
   var scene_text6 = new ScrollMagic.Scene({
           triggerElement: ".text6",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text6Ani)
       .addTo(controller);
@@ -269,7 +284,7 @@ var text7Ani = new TimelineLite();
 
   var scene_text7 = new ScrollMagic.Scene({
           triggerElement: ".text7",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text7Ani)
       .addTo(controller);
@@ -280,7 +295,7 @@ var text8Ani = new TimelineLite();
 
   var scene_text8 = new ScrollMagic.Scene({
           triggerElement: ".text8",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text8Ani)
       .addTo(controller);
@@ -291,7 +306,7 @@ var text9Ani = new TimelineLite();
 
   var scene_text9 = new ScrollMagic.Scene({
           triggerElement: ".text9",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text9Ani)
       .addTo(controller);
@@ -302,7 +317,7 @@ var text10Ani = new TimelineLite();
 
   var scene_text10 = new ScrollMagic.Scene({
           triggerElement: ".text10",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text10Ani)
       .addTo(controller);
@@ -313,7 +328,7 @@ var text11Ani = new TimelineLite();
 
   var scene_text11 = new ScrollMagic.Scene({
           triggerElement: ".text11",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text11Ani)
       .addTo(controller);
@@ -324,7 +339,7 @@ var text12Ani = new TimelineLite();
 
   var scene_text12 = new ScrollMagic.Scene({
           triggerElement: ".text12",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text12Ani)
       .addTo(controller);
@@ -335,7 +350,7 @@ var text13Ani = new TimelineLite();
 
   var scene_text13 = new ScrollMagic.Scene({
           triggerElement: ".text13",
-          triggerHook: 'onEnter', offset: 203
+          triggerHook: 'onEnter', offset: bottomOff
       })
       .setTween(text13Ani)
       .addTo(controller);
@@ -529,7 +544,7 @@ $("#face4_wrapper").mouseleave(function() {
 var eyeAnimation = new TimelineLite();
 
 eyeAnimation.to('#Eye_x5F_1', 1.1, {
-    WebkitClipPath: "inset(0% 0% 0% 100%)",
+    WebkitClipPath: "inset(0% 0% 0% 99%)",
     ease: Power0.easeNone
 });
 eyeAnimation.to('#Scanner_x5F_line', 1.04, {
@@ -585,7 +600,7 @@ hunterAnimation.to($('#arrow_hunter'), 0.3, {
 var scene_hunter = new ScrollMagic.Scene({
         triggerElement: "#hunter",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: 80
     })
     .setTween(hunterAnimation)
     .addTo(controller);
@@ -594,7 +609,8 @@ var scene_hunter = new ScrollMagic.Scene({
 var explorerAnimation = new TimelineLite();
 
 explorerAnimation.to($('#man_explorer_move'), 0.8, {
-    transform: "translateY(0)",
+    //transform: "translate3d(0,0,0)",
+    y:0,
     ease: Power2.easeOut
 });
 
@@ -602,7 +618,7 @@ explorerAnimation.to($('#man_explorer_move'), 0.8, {
 var scene_explorer = new ScrollMagic.Scene({
         triggerElement: "#explorer_man",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(explorerAnimation)
     .addTo(controller);
@@ -631,7 +647,7 @@ shipAnimation.to($('#Right_1, #Left_1'), 0.18, {
 var scene_explorer = new ScrollMagic.Scene({
         triggerElement: "#ship_sonar",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(shipAnimation)
     .addTo(controller);
@@ -661,7 +677,7 @@ touchIdAnimation.to($('#blue_x5F_lines'), 0.15, {
 var scene_touchId = new ScrollMagic.Scene({
         triggerElement: "#touchIcon",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(touchIdAnimation)
     .addTo(controller);
@@ -697,7 +713,7 @@ irisAnimation.to($('#blue_corner'), 0.20, {
 var scene_touchId = new ScrollMagic.Scene({
         triggerElement: "#irisIcon",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(irisAnimation)
     .addTo(controller);
@@ -713,7 +729,7 @@ facialAnimation.staggerTo($('#line_1,#line_2,#line_3,#line_4,#line_5'), 0.20, {
 var scene_touchId = new ScrollMagic.Scene({
         triggerElement: "#facial_recognition",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(facialAnimation)
     .addTo(controller);
@@ -753,7 +769,7 @@ touchSenAnimation.to($('#hand_elem_2'), 0.10, {
 var scene_touchId = new ScrollMagic.Scene({
         triggerElement: "#touch_sensitivity",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(touchSenAnimation)
     .addTo(controller);
@@ -801,7 +817,7 @@ heartAnimation.to($('#heart_elem_1'), 0.18, {
 var scene_heart = new ScrollMagic.Scene({
         triggerElement: "#heart_container",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(heartAnimation)
     //.setTween('#heart_elem_1', {'opacity': 0})
@@ -825,7 +841,7 @@ handsAnimation.to($('#shine_x5F_hand'), 0.3, {
 var scene_heart = new ScrollMagic.Scene({
         triggerElement: "#hands_human",
         triggerHook: 'onEnter',
-        offset: 340
+        offset: bottomOff
     })
     .setTween(handsAnimation)
     //.setTween('#heart_elem_1', {'opacity': 0})

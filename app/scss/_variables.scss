@@ -21,6 +21,10 @@ $desktop-wide: 1220px; // 768px
 
 }
 
+#eye_svg_master{
+  padding: 5px;
+}
+
 // Hunter
 #hunter{
 
@@ -37,11 +41,11 @@ $desktop-wide: 1220px; // 768px
 
 #explorer_man{
     #man_explorer_move{
-        -webkit-transform: translateY(70px);
-        -moz-transform: translateY(70px);
-        -o-transform: translateY(70px);
-        -ms-transform: translateY(70px);
-        transform: translateY(70px);
+        // -webkit-transform: translate3d(0,70px,0);
+        // -moz-transform: translate3d(0,70px,0);
+        // -o-transform: translate3d(0,70px,0);
+        // -ms-transform: translate3d(0,70px,0);
+        // transform: translate3d(0,70px,0);
     }
 }
 

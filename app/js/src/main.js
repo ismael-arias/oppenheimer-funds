@@ -68,6 +68,27 @@ $('.facial-box').not('.slick-initialized').slick({
   ]
 });
 
+$('.facial-box').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $(".facial-info p").removeClass("active");
+  $("#text-"+ (nextSlide + 1)).addClass("active");
+});
+
+
+$(".img-box").on("mouseover",function(){
+    $(".facial-info p").removeClass("active");
+  	$(".faces-bullets").removeClass("active");
+
+    $(this).addClass("active");
+    $("#text-"+$(this).data("text")).addClass("active");
+    $("#bullet-"+$(this).data("text")).addClass("active");
+});
+
+
+
+$(".img-box").on("mouseout",function(){
+	$(this).removeClass("active");
+});
+
 function resizeWidthOnly(a,b) {
   var c = [window.innerWidth];
   return onresize = function() {
@@ -188,219 +209,65 @@ var bottomOff = null;
 // for small phone: like iphone 5 etc...
 if (currentWidth <= 324) {
     bottomOff = 140;
-} else if (currentWidth >= 325) {
+} else if (currentWidth >= 325 && currentWidth <= 767) {
     bottomOff = 203;
+}
+else if (currentWidth >= 768) {
+    bottomOff = 400;
 }
 
 
 // set somes animations for contents
-TweenMax.set($('.text-container1, .text-container2, .text11'), {opacity: 0, transform:'translate3d(0,50px,0)'});
-TweenMax.set($('.text3, .text5'), {opacity: 0, transform:'translate3d(-50px,0px,0)'});
-TweenMax.set($('.text4, .text13'), {opacity: 0, transform:'translate3d(50px,0px,0)'});
-TweenMax.set($('#touchIcon'), {opacity: 0, transform:'translate3d(-50px,0px,0)'});
-TweenMax.set($('.text6, .text7'), {opacity: 0, transform:'translate3d(0px,0px,0)'});
-TweenMax.set($('.text8, .text9, .text12'), {opacity: 0, transform:'translate3d(0px,50px,0)'});
-TweenMax.set($('.text10'), {opacity: 0, transform:'translate3d(0px,-50px,0)'});
 
 TweenMax.set($('#man_explorer_move'), {y:70});
 
 // parallax effect for the titles
-TweenMax.set($('.touch_parallax, .facial_parallax, .iris_parallax, .heart_parallax'), {transform:'translate3d(0px,-80px,0)'});
-
-var text1Ani = new TimelineLite();
-  text1Ani.to($('.text-container1'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text1 = new ScrollMagic.Scene({
-        triggerElement: ".text-container1",
-        triggerHook: 'onEnter', offset: bottomOff
-    })
-    .setTween(text1Ani)
-    .addTo(controller);
-// text 2
-var text2Ani = new TimelineLite();
-  text2Ani.to($('.text-container2'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text2 = new ScrollMagic.Scene({
-        triggerElement: ".text-container2",
-        triggerHook: 'onEnter', offset: bottomOff
-    })
-    .setTween(text2Ani)
-    .addTo(controller);
-// text 3
-var text3Ani = new TimelineLite();
-  text3Ani.to($('.text3'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text3 = new ScrollMagic.Scene({
-          triggerElement: ".text3",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text3Ani)
-      .addTo(controller);
-// text 4
-var text4Ani = new TimelineLite();
-  text3Ani.to($('.text4'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text4 = new ScrollMagic.Scene({
-          triggerElement: ".text4",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text4Ani)
-      .addTo(controller);
-// touch ID fade animation "not svg animation"
-var touchAniFade = new TimelineLite();
-    touchAniFade.to($('#touchIcon'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-    var scene_touchFade = new ScrollMagic.Scene({
-          triggerElement: "#touchIcon",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(touchAniFade)
-      .addTo(controller);
-
-// text 5
-var text5Ani = new TimelineLite();
-  text5Ani.to($('.text5'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text5 = new ScrollMagic.Scene({
-          triggerElement: ".text5",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text5Ani)
-      .addTo(controller);
-
-// text 6
-var text6Ani = new TimelineLite();
-  text6Ani.to($('.text6'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text6 = new ScrollMagic.Scene({
-          triggerElement: ".text6",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text6Ani)
-      .addTo(controller);
-
-// text 7
-var text7Ani = new TimelineLite();
-  text7Ani.to($('.text7'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text7 = new ScrollMagic.Scene({
-          triggerElement: ".text7",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text7Ani)
-      .addTo(controller);
-
-// text 8
-var text8Ani = new TimelineLite();
-  text8Ani.to($('.text8'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text8 = new ScrollMagic.Scene({
-          triggerElement: ".text8",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text8Ani)
-      .addTo(controller);
-
-// text 9
-var text9Ani = new TimelineLite();
-  text9Ani.to($('.text9'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text9 = new ScrollMagic.Scene({
-          triggerElement: ".text9",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text9Ani)
-      .addTo(controller);
-
-// text 10
-var text10Ani = new TimelineLite();
-  text10Ani.to($('.text10'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text10 = new ScrollMagic.Scene({
-          triggerElement: ".text10",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text10Ani)
-      .addTo(controller);
-
-// text 11
-var text11Ani = new TimelineLite();
-  text11Ani.to($('.text11'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text11 = new ScrollMagic.Scene({
-          triggerElement: ".text11",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text11Ani)
-      .addTo(controller);
-
-// text 12
-var text12Ani = new TimelineLite();
-  text12Ani.to($('.text12'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text12 = new ScrollMagic.Scene({
-          triggerElement: ".text12",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text12Ani)
-      .addTo(controller);
-
-// text 13
-var text13Ani = new TimelineLite();
-  text13Ani.to($('.text13'), 0.9, {opacity: 1, transform:'translate3d(0,0,0)'});
-
-  var scene_text13 = new ScrollMagic.Scene({
-          triggerElement: ".text13",
-          triggerHook: 'onEnter', offset: bottomOff
-      })
-      .setTween(text13Ani)
-      .addTo(controller);
-
+// TweenMax.set($('.touch_parallax, .facial_parallax, .iris_parallax, .heart_parallax'), {transform:'translate3d(0px,-80px,0)'});
 
 // Parallax for tittles
 // touch parallax
-var touch_paralaxAni = new TimelineLite();
-  touch_paralaxAni.to($('.touch_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
-
-  var scene_touch_parallax = new ScrollMagic.Scene({
-          triggerElement: ".touch_parallax",
-          triggerHook: 'onEnter', triggerOffset: 500, duration: 600
-      })
-      .setTween(touch_paralaxAni)
-      .addTo(controller);
+// var touch_paralaxAni = new TimelineLite();
+//   touch_paralaxAni.to($('.touch_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+//
+//   var scene_touch_parallax = new ScrollMagic.Scene({
+//           triggerElement: ".touch_parallax",
+//           triggerHook: 'onEnter', triggerOffset: 500, duration: 600
+//       })
+//       .setTween(touch_paralaxAni)
+//       .addTo(controller);
 
 // facial parallax
-var facial_paralaxAni = new TimelineLite();
-  facial_paralaxAni.to($('.facial_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
-
-  var scene_facial_parallax = new ScrollMagic.Scene({
-          triggerElement: ".facial_parallax",
-          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
-      })
-      .setTween(facial_paralaxAni)
-      .addTo(controller);
-
-// iris parallax
-var iris_paralaxAni = new TimelineLite();
-  iris_paralaxAni.to($('.iris_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
-
-  var scene_iris_parallax = new ScrollMagic.Scene({
-          triggerElement: ".iris_parallax",
-          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
-      })
-      .setTween(iris_paralaxAni)
-      .addTo(controller);
+// var facial_paralaxAni = new TimelineLite();
+//   facial_paralaxAni.to($('.facial_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+//
+//   var scene_facial_parallax = new ScrollMagic.Scene({
+//           triggerElement: ".facial_parallax",
+//           triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+//       })
+//       .setTween(facial_paralaxAni)
+//       .addTo(controller);
 
 // iris parallax
-var heart_paralaxAni = new TimelineLite();
-  heart_paralaxAni.to($('.heart_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+// var iris_paralaxAni = new TimelineLite();
+//   iris_paralaxAni.to($('.iris_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+//
+//   var scene_iris_parallax = new ScrollMagic.Scene({
+//           triggerElement: ".iris_parallax",
+//           triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+//       })
+//       .setTween(iris_paralaxAni)
+//       .addTo(controller);
 
-  var scene_heart_parallax = new ScrollMagic.Scene({
-          triggerElement: ".heart_parallax",
-          triggerHook: 'onEnter', triggerOffset: 300, duration: 600
-      })
-      .setTween(heart_paralaxAni)
-      .addTo(controller);
+// iris parallax
+// var heart_paralaxAni = new TimelineLite();
+//   heart_paralaxAni.to($('.heart_parallax'), 0.5, {transform:'translate3d(0,50px,0)'});
+//
+//   var scene_heart_parallax = new ScrollMagic.Scene({
+//           triggerElement: ".heart_parallax",
+//           triggerHook: 'onEnter', triggerOffset: 300, duration: 600
+//       })
+//       .setTween(heart_paralaxAni)
+//       .addTo(controller);
 
 //Set start positions for some elements
 TweenMax.set($('#line_1, #line_2, #line_3, #line_4, #line_5'), {
@@ -539,38 +406,52 @@ $("#face4_wrapper").mouseleave(function() {
 // Start with Scroll Magic
 
 
-
+var isFirefox = typeof InstallTrigger !== 'undefined';
 
 // Eye Animations
-var eyeAnimation = new TimelineLite();
 
 //Scanner_eye
-TweenMax.set($('#Scanner_eye'), {transform: 'translate(-280px,0)'});
-
-    var eyeDistance = 450;
-
-    eyeAnimation.to('#toBeMasked', 1.1, {x:eyeDistance, ease: Power0.easeNone});
-    eyeAnimation.to('#Eye2', 1.1, {x:-eyeDistance, ease: Power0.easeNone}, '-=1.1');
-    eyeAnimation.to('#Scanner_eye', 1.08, {x:292, ease: Power0.easeNone}, '-=1.07');
-
-// eyeAnimation.to('#Eye_x5F_1', 1.1, {
-//     WebkitClipPath: "inset(0% 0% 0% 99%)",
-//     ease: Power0.easeNone
-// });
-// eyeAnimation.to('#Scanner_x5F_line', 1.04, {
-//     transform: "translate3d(124px,0,0)",
-//     ease: Power0.easeNone
-// }, '-=1.06');
-
-//    var scene_eye = new ScrollMagic.Scene({
-//        triggerElement: "#eyeMask", triggerHook: 'onEnter', offset: 340})
-//        .setTween(eyeAnimation)
-//        .addTo(controller);
-
+// TweenMax.set($('#Scanner_eye'), {transform: 'translate(-280px,0)'});
+//
+//     var eyeDistance = 450;
+//
+//     eyeAnimation.to('#toBeMasked', 1.1, {x:eyeDistance, ease: Power0.easeNone});
+//     eyeAnimation.to('#Eye2', 1.1, {x:-eyeDistance, ease: Power0.easeNone}, '-=1.1');
+//     eyeAnimation.to('#Scanner_eye', 1.08, {x:292, ease: Power0.easeNone}, '-=1.07');
+//
 // var scene_eye = new ScrollMagic.Scene({
-//     triggerElement: "#eyeMask", triggerHook: 'onEnter', triggerOffset: 600, duration: 400})
+//         triggerElement: "#eyeMask",
+//         triggerOffset: 600,
+//         duration: 300
+//     })
 //     .setTween(eyeAnimation)
 //     .addTo(controller);
+
+var eyeAnimation = new TimelineLite();
+
+$(window).resize(function(){
+    sameSize ();
+});
+ function sameSize (){
+
+    $("#eye2").width($("#eye1").width());
+
+     $("#eye2").height($("#toBeMasked").height());
+     $("#eye1").height($("#eye1").width() / 1.30584833504337281969965488294);
+     $("#eye2").height($("#eye1").width() / 1.30584833504337281969965488294);
+     $("#scaner_1").height($("#eye1").width() / 1.30584833504337281969965488294);
+     //$("#scaner_1").height($("#toBeMasked").height());
+
+
+}
+sameSize ();
+//Scanner_eye
+//TweenMax.set($('#Scann
+
+    eyeAnimation.to('#toBeMasked', 1.1, {width:'100%', ease: Power0.easeNone});
+    eyeAnimation.to('#scanWrapper', 1.064, {width:'100%', ease: Power0.easeNone}, '-=1.075');
+    //eyeAnimation.to('#scanner_wrapper', 1.061, {xPercent:'92.3%', ease: Power0.easeNone}, '-=1.063');
+
 var scene_eye = new ScrollMagic.Scene({
         triggerElement: "#eyeMask",
         triggerOffset: 600,
@@ -578,6 +459,47 @@ var scene_eye = new ScrollMagic.Scene({
     })
     .setTween(eyeAnimation)
     .addTo(controller);
+
+    //Firefox Eye Animation.
+    // if(isFirefox){
+    //   //Scanner_eye for Firefox
+    //   var eyeAnimation = new TimelineLite();
+    //
+    //   //Scanner_eye
+    //   TweenMax.set($('#Scanner_eye'), {transform: 'translate(-270px,0)'});
+    //   TweenMax.set($('#scanner_wrapper'), {left: '-1%'});
+    //
+    //     eyeAnimation.to('#toBeMasked', 1.1, {xPercent:'99%', ease: Power0.easeNone});
+    //     eyeAnimation.to('#Eye2', 1.1, {xPercent:'-99%', ease: Power0.easeNone}, '-=1.1');
+    //     eyeAnimation.to('#scanner_wrapper', 1.071, {xPercent:'92.0%', ease: Power0.easeNone}, '-=1.073');
+    //
+    //   var scene_eye = new ScrollMagic.Scene({
+    //           triggerElement: "#eyeMask",
+    //           triggerOffset: 600,
+    //           duration: 300
+    //       })
+    //       .setTween(eyeAnimation)
+    //       .addTo(controller);
+    // }else{
+    //   //Scanner_eye for other browsers
+    //   var eyeAnimation = new TimelineLite();
+    //
+    //   //Scanner_eye
+    //   TweenMax.set($('#Scanner_eye'), {transform: 'translate(-270px,0)'});
+    //
+    //     eyeAnimation.to('#toBeMasked', 1.1, {xPercent:'99%', ease: Power0.easeNone});
+    //     eyeAnimation.to('#Eye2', 1.1, {xPercent:'-99%', ease: Power0.easeNone}, '-=1.1');
+    //     eyeAnimation.to('#scanner_wrapper', 1.085, {xPercent:'94.5%', ease: Power0.easeNone}, '-=1.084');
+    //
+    //   var scene_eye = new ScrollMagic.Scene({
+    //           triggerElement: "#eyeMask",
+    //           triggerOffset: 600,
+    //           duration: 300
+    //       })
+    //       .setTween(eyeAnimation)
+    //       .addTo(controller);
+    // }
+
 
 // Hunter Animations
 var hunterAnimation = new TimelineLite();
@@ -636,25 +558,29 @@ var scene_explorer = new ScrollMagic.Scene({
 // Ship Sonar Animations
 var shipAnimation = new TimelineLite();
 
-shipAnimation.to($('#Right_1, #Left_1'), 0.18, {
-        strokeDashoffset: 0,
-        ease: Power0.easeNone
+shipAnimation.to($('#Right_1, #Left_1'), 0.25, {
+        opacity:1
+        //strokeDashoffset: 0,
+        //ease: Power0.easeNone
     })
-    .to($('#Right_2, #Left_2'), 0.18, {
-        strokeDashoffset: 0,
-        ease: Power0.easeNone
+    .to($('#Right_2, #Left_2'), 0.25, {
+        opacity:1
+        //strokeDashoffset: 0,
+        //ease: Power0.easeNone
     })
-    .to($('#Right_3, #Left_3'), 0.18, {
-        strokeDashoffset: 0,
-        ease: Power0.easeNone
+    .to($('#Right_3, #Left_3'), 0.25, {
+        opacity:1
+        //strokeDashoffset: 0,
+        //ease: Power0.easeNone
     })
-    .to($('#Right_4, #Left_4'), 0.18, {
-        strokeDashoffset: 0,
-        ease: Power0.easeNone
+    .to($('#Right_4, #Left_4'), 0.25, {
+        opacity:1
+        //strokeDashoffset: 0,
+        //ease: Power0.easeNone
     });
 
 
-var scene_explorer = new ScrollMagic.Scene({
+var scene_shipSonar = new ScrollMagic.Scene({
         triggerElement: "#ship_sonar",
         triggerHook: 'onEnter',
         offset: bottomOff

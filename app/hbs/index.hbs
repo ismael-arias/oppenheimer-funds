@@ -29,35 +29,36 @@
 
 <section id="section3" class="section3" tracking="Third Section">
 	<div class="section-container">
+
 		<div class="section-top">
 			{{> touch_sensitivity }}
 			<div class="subtitle">
 				<p>{{ index.section3.title}}</p>
 			</div>
-		</div>
-		<div class="section-title">
-			<h1 class="touch_parallax">{{ index.section3.title}}</h1>
+			<div class="section-title">
+				<h1 class="touch_parallax">{{ index.section3.title}}</h1>
+			</div>
 		</div>
 
 		<div class="section-info">
 			<div class="top-info content">
-				<p class="text3">{{ index.section3.paragraphs}}</p>
+				<p class="text3">{{{ index.section3.paragraphs }}}</p>
 			</div>
 
 			<div class="middle-info">
 					{{> touch-icon }}
 				<div class="center-info content">
-					<p class="text4">{{ index.section3.copy.paragraphs}}</p>
+					<p class="text4">{{{ index.section3.copy.paragraphs }}}</p>
 				</div>
 			</div>
 
 			<div class="bottom-info content">
 				<div class="pullquote">
-					<p class="text5">{{ index.section3.copy2.paragraphs}}</p>
+					<p class="text5">{{{ index.section3.copy2.paragraphs }}}</p>
 				</div>
 				{{> hands_human }}
 				<div class="bottom-copy text6">
-					<p>{{ index.section3.copy3.paragraphs}}</p>
+					<p>{{{ index.section3.copy3.paragraphs }}}</p>
 					<p>{{{ index.section3.copy4.paragraphs }}}</p>
 					<p>{{{ index.section3.copy5.paragraphs }}}</p>
 				</div>
@@ -70,14 +71,13 @@
 <section id="section4" class="section4" tracking="Fifth Section">
 	<div class="section-container">
 
-		<div class="section-title">
-			<h1 class="facial_parallax">{{ index.section4.title}}</h1>
-		</div>
-
 		<div class="section-top">
 			{{> facial_recognition }}
 			<div class="subtitle">
 				<p>{{ index.section4.title}}</p>
+			</div>
+			<div class="section-title">
+				<h1 class="facial_parallax">{{ index.section4.title}}</h1>
 			</div>
 		</div>
 
@@ -88,25 +88,34 @@
 		</div>
 
 		<div class="middle-content content">
-			<h2>{{{ index.section4.copy2-1.paragraphs }}}</h2>
-			<h2>{{{ index.section4.copy2.paragraphs }}}</h2>
+			<h1>{{{ index.section4.copy2-1.paragraphs }}}</h1>
+			<h1>{{{ index.section4.copy2.paragraphs }}}</h1>
 			<div id="facial-box-container" class="facial-box">
-			    <div class="img-box">
+			    <div class="img-box" data-text="1">
 						{{> facial1 }}
+						<div id="bullet-1" class="faces-bullets active"></div>
 					</div>
-					<div class="img-box">
+					<div class="img-box" data-text="2">
 						{{> facial2 }}
+						<div id="bullet-2" class="faces-bullets">	</div>
 					</div>
-					<div class="img-box">
+					<div class="img-box face-img" data-text="3">
 						{{> facial3 }}
+						<div id="bullet-3" class="faces-bullets">	</div>
 					</div>
-					<div class="img-box">
+					<div class="img-box" data-text="4">
 						{{> facial4 }}
+						<div id="bullet-4" class="faces-bullets">	</div>
 					</div>
 			</div>
+
 			<div class="facial-info">
-				<p>{{{ index.section4.copy3.paragraphs }}}</p>
+			  <p id = "text-1" class="active">{{{ index.section4.copy3.text1 }}}</p>
+			  <p id = "text-2">{{{ index.section4.copy3.text2 }}}</p>
+			  <p id = "text-3">{{{ index.section4.copy3.text3 }}}</p>
+			  <p id = "text-4">{{{ index.section4.copy3.text4 }}}</p>
 			</div>
+
 		</div>
 
 		<div class="bottom-content content">
@@ -120,14 +129,13 @@
 <section id="section5" class="section5" tracking="Fifth Section">
 	<div class="section-container">
 
-		<div class="section-title">
-			<h1 class="iris_parallax">{{ index.section5.title}}</h1>
-		</div>
-
 		<div class="section-top">
 			{{> iris_icon }}
 			<div class="subtitle">
 				<p>{{{ index.section5.title }}}</p>
+			</div>
+			<div class="section-title">
+				<h1 class="iris_parallax">{{ index.section5.title}}</h1>
 			</div>
 		</div>
 
@@ -164,14 +172,13 @@
 <section id="section6" class="section6" tracking="Sixth Section">
 	<div class="section-container">
 
-		<div class="section-title">
-			<h1 class="heart_parallax">{{ index.section6.title}}</h1>
-		</div>
-
 		<div class="section-top">
 			{{> heart }}
 			<div class="subtitle">
 				<p>{{{ index.section6.subtitle }}}</p>
+			</div>
+			<div class="section-title">
+				<h1 class="heart_parallax">{{ index.section6.title}}</h1>
 			</div>
 		</div>
 

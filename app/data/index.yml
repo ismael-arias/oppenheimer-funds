@@ -100,13 +100,13 @@ section2-paragraph:
 section3:
   title: "Touch Sensitivity"
   paragraphs: |
-      There are more than 17,000 tactile units in the hand alone, and
+      There are more than <a href=#" target="_blank">17,000</a> tactile units in the hand alone, and
       that’s just a small portion of the sensory receptors that make up our
-      sense of touch. Believed to be the first sense fetuses develop, touch
+      sense of touch. Believed to be <a href=#" target="_blank">the first sense</a> fetuses develop, touch
       is so important as a means of communication, establishing intimate
-      bonds and orienting ourselves in the world, it can actually shape
-      chemical development in the brain and have lasting physical and
-      social effects.
+      bonds and orienting ourselves in the world, it can actually <a href=#" target="_blank">shape
+      chemical development</a> in the brain and have <a href=#" target="_blank">lasting physical and
+      social effects</a>.
   copy:
     paragraphs: |
       Just as touch is vital for identifying our surroundings and the people
@@ -177,19 +177,19 @@ section4:
       The ability to find friends, build communities and avoid foes is
       crucial to the survival of many species. So it’s not surprising that
       human babies recognize faces almost from the second they’re born.
-      Research shows that infants mere minutes old can recognize facial
-      patterns and, within a couple days, can pick out their mothers faces
-      among a sea of others. By six months, children are so adept at facial
+      Research shows that infants mere <a href=#" target="_blank">minutes old</a> can recognize facial
+      patterns and, within a couple days, <a href=#" target="_blank">can pick out</a> their mothers faces
+      among a sea of others. By <a href=#" target="_blank">six months</a>, children are so adept at facial
       recognition, they can identify individuals within an animal species
        more accurately than adults can.<br/><br />
 
-      Using some techniques that mimic how cells in the visual cortex
+      Using <a href=#" target="_blank">some techniques</a> that mimic how cells in the visual cortex
       process information, facial recognition algorithms are catching up
       to their human counterparts. Widespread in the biometrics world,
       facial recognition programs are used by an enormous array of
-      organizations, from law enforcement agencies searching for
-      suspects to bars and restaurants identifying loyal customers to
-      mining companies detecting whether machine operators are alert
+      organizations, from <a href=#" target="_blank">law enforcement agencies</a> searching for
+      suspects to <a href=#" target="_blank">bars and restaurants identifying loyal customers</a> to
+      <a href=#" target="_blank">mining companies</a> detecting whether machine operators are alert
       or drowsy.
 
   copy2:
@@ -201,10 +201,21 @@ section4:
       Tap Faces to Animate
 
   copy3:
-    paragraphs: |
-      Analyzing how features change, emotion ID systems
-      can pick out signature emotions like happiness,
-      surprise and disgust.
+    text1: |
+      There are about 80 nodal points on the face, but facial
+      recognition algorithms often read fewer than half.
+
+    text2: |
+      Analyzing how features change, emotion ID systems can
+      pick out signature emotions like happiness, surprise and disgust.
+
+    text3: |
+      Facial ID systems run a new image or video through a recognition
+      algorithm and compare it with images on file.
+
+    text4: |
+      Algorithms identify sleepiness in the face by looking at head pose,
+      blinking patterns and changes in facial muscles.
 
   copy4:
     paragraphs: |
@@ -229,13 +240,13 @@ section5:
       visually stand out — humans are one of the only primates with
       high contrast between the iris and the white part of the eye
       called the sclera — eyes are rich information portals that babies
-      instinctually seek out. One study published in Proceedings of the
+      instinctually seek out. <a href=#" target="_blank">One study</a> published in Proceedings of the
       National. Academy of Sciences found that newborns as young as two
       days old show preference for people who gaze directly into their
       eyes rather than away. There are chemical reasons behind that.
-      Sustained eye contact releases oxytocin, a hormone associated with
+      Sustained eye contact <a href=#" target="_blank">releases oxytocin</a>, a hormone associated with
       social bonding, which may explain the fuzzy feelings that come when
-      gazing deep into a lover’s (or dog’s) eyes.
+      gazing deep into a lover’s (<a href=#" target="_blank">or dog’s</a>) eyes.
 
   copy1:
     paragraphs: |
@@ -250,7 +261,7 @@ section5:
       other biomarkers. Compared to 10-point DNA analysis, where the
       chance of two unrelated people having a match on 10 genetic
       markers and thus yielding a false identification is about one out of
-      every billion (10<sup>9</sup>), the chances of two people having identical irises
+      every billion (10<sup>9</sup>), the chances of two people having <a href=#" target="_blank">identical irises</a>
       is about drastically smaller (10<sup>78</sup>). Iris scanners have another major
       advantage over other biometric identification systems because,
       unlike faces and voices, irises don’t significantly change with age.
@@ -259,7 +270,7 @@ section5:
     paragraphs: |
         Iris recognition generally requires subjects to stay still and in close
         proximity to the scanner, says Woodard, but that may change soon.
-        Emerging research focused on long-range detection and
+        Emerging <a href=#" target="_blank">research</a> focused on long-range detection and
         video-based identification systems has the potential to revolutionize
         how iris scanning is used in security, identification and medical contexts.
 
@@ -272,10 +283,10 @@ section6:
       change, which can give away a shift in mood even if your facial
       expression doesn’t. Polygraph administrators have long used heart
       rate changes as a way to detect if a person is feeling more stressed
-      than usual, but more recently marketers, video game designers and
-      mental health professionals are measuring heart rate variability to
-      detect when users are excited and when they’re feeling down or
-      bored.
+      than usual, but more recently <a href=#" target="_blank">marketers</a>,
+      <a href=#" target="_blank">video game designers</a> and <a href=#" target="_blank">mental health professionals</a>
+      are measuring heart rate variability to detect when users are excited
+      and when they’re feeling down or bored.
 
   copy1:
     paragraphs: |
@@ -302,30 +313,30 @@ section6:
       processes to create new ways of understanding and interpreting
       our world.<br /><br />
 
-      Illustrations by: Ramouldo Faura
+      Illustrations by: Ramouldo Faura<br />
+      <span class="italic-text">OppenheimerFunds is not affiliated with T Brand Studio.</span>
 
   slideshow:
       images:
         - image: "images/Slide1.svg"
           paragraphs: |
-            Analyzing an athlete’s heart rate can show when they detect
-            and react to approaching objects, such as when a defensive
-            line is coming at an offensive player, or when a hurdle is
-            approaching a runner.
+            In combination with other biometric markers, heart rate can
+            help detect when an athlete is dehydrated, which is useful
+            for football stars playing in pads and helmets in outdoor heat.
 
         - image: "images/Slide2.svg"
           paragraphs: |
-            Analyzing an athlete’s heart rate can show when they detect
-            and react to approaching objects, such as when a defensive
-            line is coming at an offensive player, or when a hurdle is
-            approaching a runner.
+            Heart rate can be monitored throughout an activity — swimming or
+            soccer training for instance — to pinpoint when an athlete starts
+            becoming fatigued and if they're hitting their target rest zone
+            during breaks.
 
         - image: "images/Slide3.svg"
           paragraphs: |
-            Analyzing an athlete’s heart rate can show when they detect
-            and react to approaching objects, such as when a defensive
-            line is coming at an offensive player, or when a hurdle is
-            approaching a runner.
+            Measuring beat variations in the heart can help evaluate endurance,
+            which can be useful for runners. It can also be used as an indicator
+            into how calm athletes stay under pressure, such as for archers lining
+            up the perfect shot.
 
 
 section7:
